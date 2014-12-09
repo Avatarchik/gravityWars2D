@@ -63,7 +63,7 @@ public class playerState : MonoBehaviour {
 			player1Stats += 1;
 
 		else if (player2 == true)
-			player2Stats += 2;
+			player2Stats += 1;
 
 
 		player1Switch = playerObject.GetComponentInChildren<enableScript>();
