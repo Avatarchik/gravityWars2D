@@ -1,0 +1,1719 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tran",
+				"transform	[class]"
+			],
+			[
+				"transform",
+				"transform	GameObject.*"
+			],
+			[
+				"gameOb",
+				"gameObject	[class]"
+			],
+			[
+				"FindWi",
+				"FindWithTag	tag"
+			],
+			[
+				"playerS",
+				"playerSwitch"
+			],
+			[
+				"scene",
+				"sceneManager"
+			],
+			[
+				"OnMou",
+				"OnMouseDown	MonoBehaviour.*()"
+			],
+			[
+				"OnM",
+				"OnMouseDown	MonoBehaviour.*()"
+			],
+			[
+				"IgnoreLa",
+				"IgnoreLayerCollision	Physics2D.*(layer1, layer2, ignore)"
+			],
+			[
+				"floa",
+				"float	PropType.*"
+			],
+			[
+				"Game",
+				"GameObject	[class]"
+			],
+			[
+				"sma",
+				"smallestSize	(global, instance)"
+			],
+			[
+				"smal",
+				"smallestList	(global, instance)"
+			],
+			[
+				"smalle",
+				"smallestList"
+			],
+			[
+				"small",
+				"smallestSize	(global, instance)"
+			],
+			[
+				"sum",
+				"sumList	(global, instance)"
+			],
+			[
+				"list",
+				"listNumbers	(global, instance)"
+			],
+			[
+				"rand",
+				"randrange	(imported, instance)"
+			],
+			[
+				"cm",
+				"cmds"
+			],
+			[
+				"Inter",
+				"InternalMove"
+			],
+			[
+				"QA",
+				"QAbstractItemView"
+			],
+			[
+				"setIcon",
+				"setIconSize"
+			],
+			[
+				"add",
+				"addEllipse"
+			],
+			[
+				"main",
+				"mainGrid"
+			],
+			[
+				"QGra",
+				"QGraphicsEllipseItem"
+			],
+			[
+				"Qt",
+				"QtGui"
+			],
+			[
+				"Draw",
+				"DrawWidget	(global, class)"
+			],
+			[
+				"text",
+				"textChanged"
+			],
+			[
+				"may",
+				"mayaRun	(global, function)"
+			],
+			[
+				"test",
+				"testWidget	(attribute, instance)"
+			],
+			[
+				"FileRea",
+				"FileReaderWidget	(imported, class)"
+			],
+			[
+				"ListWidget",
+				"ListWidgetExtra	(global, class)"
+			],
+			[
+				"ad",
+				"addWidget"
+			],
+			[
+				"ListW",
+				"ListWidget	(global, class)"
+			],
+			[
+				"set",
+				"setCentralWidget"
+			],
+			[
+				"windo",
+				"windowTitle	(global, instance)"
+			],
+			[
+				"__",
+				"__init__(parent)	(attribute, function)"
+			],
+			[
+				"sup",
+				"superWidget	(attribute, instance)"
+			],
+			[
+				"fr",
+				"frWidget	(attribute, instance)"
+			],
+			[
+				"startDir",
+				"startDir=	(parameter_keyword, instance)"
+			],
+			[
+				"sc",
+				"scriptJob"
+			],
+			[
+				"attr",
+				"attributeChange"
+			],
+			[
+				"visibi",
+				"visibility_cb"
+			],
+			[
+				"top",
+				"topLayout	(attribute, instance)"
+			],
+			[
+				"scroll",
+				"scrollParentLayout"
+			],
+			[
+				"scrol",
+				"scrollWidget	(attribute, instance)"
+			],
+			[
+				"scr",
+				"scrollWidget	(attribute, instance)"
+			],
+			[
+				"scro",
+				"scrollArea	(attribute, instance)"
+			],
+			[
+				"setWit",
+				"setWidgetResizable"
+			],
+			[
+				"te",
+				"testBtn	(attribute, instance)"
+			],
+			[
+				"setWi",
+				"setWidget"
+			],
+			[
+				"MainWi",
+				"mainWindow"
+			],
+			[
+				"directory",
+				"directoryItems"
+			],
+			[
+				"new",
+				"newItems	(local, instance)"
+			],
+			[
+				"Lis",
+				"ListWidgetExtra	(local, instance)"
+			],
+			[
+				"ListWid",
+				"ListWidgetExtra	(global, class)"
+			],
+			[
+				"current",
+				"setCurrentItem"
+			],
+			[
+				"app",
+				"append	(builtin, function)"
+			],
+			[
+				"insertI",
+				"insertItems"
+			],
+			[
+				"Ex",
+				"ExtendedSelection"
+			],
+			[
+				"select",
+				"selectDict	(local, instance)"
+			],
+			[
+				"selection",
+				"selectionList	(local, instance)"
+			],
+			[
+				"i",
+				"i	(local, instance)"
+			],
+			[
+				"obj",
+				"objName	(local, instance)"
+			],
+			[
+				"get",
+				"getattr"
+			],
+			[
+				"curren",
+				"currentIndex"
+			],
+			[
+				"selec",
+				"selectedItems"
+			],
+			[
+				"info",
+				"infoPrint	(local, instance)"
+			],
+			[
+				"rootB",
+				"rootGrab_lineEdit"
+			],
+			[
+				"deformed",
+				"deformed_lineEdit"
+			],
+			[
+				"deformer",
+				"deformer_lineEdit"
+			],
+			[
+				"roo",
+				"rootGrab_lineEdit"
+			],
+			[
+				"root",
+				"rootGrab_pb"
+			],
+			[
+				"con",
+				"connect	Signal/Slot >> Odl Syntax"
+			],
+			[
+				"pyside",
+				"pysideuic"
+			],
+			[
+				"scale",
+				"scale_ckbx"
+			],
+			[
+				"infoFil",
+				"infoFilter(obj, currentIndex, info)	(attribute, function)"
+			],
+			[
+				"rotate",
+				"rotate_ckbx"
+			],
+			[
+				"translate",
+				"translate_ckbx"
+			],
+			[
+				"is",
+				"isChecked"
+			],
+			[
+				"transl",
+				"translate_ckbx"
+			],
+			[
+				"window",
+				"windowObject	(global, instance)"
+			],
+			[
+				"sel",
+				"selectedItems"
+			],
+			[
+				"sele",
+				"selectedItems"
+			],
+			[
+				"cl",
+				"clicked"
+			],
+			[
+				"ap",
+				"append_pb	(attribute, instance)"
+			],
+			[
+				"co",
+				"connect	Signal/Slot >> Odl Syntax"
+			],
+			[
+				"QS",
+				"QSizePolicy"
+			],
+			[
+				"label",
+				"labelLayout	(attribute, instance)"
+			],
+			[
+				"steer",
+				"steeringWheel"
+			],
+			[
+				"A",
+				"Automobile"
+			],
+			[
+				"incep",
+				"inceptionOdds"
+			],
+			[
+				"level",
+				"levelofDream"
+			],
+			[
+				"charac",
+				"characterList"
+			],
+			[
+				"ch",
+				"characterList"
+			],
+			[
+				"NS",
+				"NSAEmployee"
+			],
+			[
+				"creat",
+				"createUI"
+			],
+			[
+				"wrap",
+				"wrapInstance"
+			],
+			[
+				"re",
+				"resize"
+			],
+			[
+				"d",
+				"defs	Method"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/scripts/torpedo.cs",
+			"settings":
+			{
+				"buffer_size": 1378,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/playerControl.cs",
+			"settings":
+			{
+				"buffer_size": 215,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class gravity : MonoBehaviour {\n	\n	public float maxGravDist = 4.0f;\n	public float maxGravity = 35.0f;\n	\n	GameObject[] planets;\n\n	\n	void Start () {\n		planets = GameObject.FindGameObjectsWithTag(\"Planet\");\n	}\n	\n	void FixedUpdate () {\n		foreach(GameObject planet in planets) {\n			float dist = Vector3.Distance(planet.transform.position, transform.position);\n			if (dist <= maxGravDist) {\n				Vector3 v = planet.transform.position - transform.position;\n				rigidbody2D.AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);\n			}\n		}\n	}\n}",
+			"file": "Assets/scripts/gravity.cs",
+			"file_size": 1181,
+			"file_write_time": 1405639016000000,
+			"settings":
+			{
+				"buffer_size": 598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/createPlanets.cs",
+			"settings":
+			{
+				"buffer_size": 3809,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/enableScript.cs",
+			"settings":
+			{
+				"buffer_size": 360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class destroyOnCollision : MonoBehaviour\n{\n	public GameObject sceneManager;\n	private playerControl playerSwitch;\n\n	private void signalTurnEnd()\n	{\n		sceneManager = GameObject.FindWithTag(\"gameManager\");\n		playerSwitch = sceneManager.GetComponent<playerControl>();\n		playerSwitch.playerSwitch();\n	}\n	\n\n	private void OnCollisionEnter2D(Collision2D collision)\n	{\n		Destroy(gameObject);\n		signalTurnEnd();\n\n\n	}\n}",
+			"file": "Assets/Scripts/destroyOnCollision.cs",
+			"file_size": 508,
+			"file_write_time": 1410512154000000,
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pyth",
+				"SublimeREPL: Python"
+			],
+			[
+				"rep",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"git res",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"gitre",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git rese",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git re",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"gitp",
+				"Git: Push"
+			],
+			[
+				"gitqui",
+				"Git: Quick Commit"
+			],
+			[
+				"gitad",
+				"Git: Add Current File"
+			],
+			[
+				"git cus",
+				"Git: Custom Command"
+			],
+			[
+				"git cust",
+				"Git: Custom Command"
+			],
+			[
+				"git:cus",
+				"Git: Custom Command"
+			],
+			[
+				"gitP",
+				"Git: Push"
+			],
+			[
+				"gitq",
+				"Git: Quick Commit"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"git qu",
+				"Git: Quick Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git:confi",
+				"Git: Open Config Url"
+			],
+			[
+				"gitcon",
+				"Git: Open Config File"
+			],
+			[
+				"git con",
+				"Git: Open Config File"
+			],
+			[
+				"git:co",
+				"Git: Quick Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add Current File"
+			],
+			[
+				"gitst",
+				"Git: Status"
+			],
+			[
+				"gitpush",
+				"Git: Push"
+			],
+			[
+				"gitgui",
+				"Git GUI Clients: GitX"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"git:add ",
+				"Git: Add..."
+			],
+			[
+				"gitSt",
+				"Git: Status"
+			],
+			[
+				"gits",
+				"Git: Status"
+			],
+			[
+				"git gui",
+				"Git GUI Clients: GitX"
+			],
+			[
+				"git:gui",
+				"Git: Gui"
+			],
+			[
+				"gitx",
+				"Git GUI Clients: GitX"
+			],
+			[
+				"",
+				"Git GUI Clients: GitX"
+			],
+			[
+				"syntax: ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"syntax:py",
+				"Set Syntax: Python"
+			],
+			[
+				"synta:py",
+				"Set Syntax: Python"
+			],
+			[
+				"repl:py",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl:",
+				"SublimeREPL: Python"
+			],
+			[
+				"syntax:X",
+				"Set Syntax: XML"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"synt:xm",
+				"Set Syntax: XML"
+			],
+			[
+				"synt:py",
+				"Set Syntax: Python"
+			],
+			[
+				"sublimrge",
+				"Sublimerge: View Diff"
+			],
+			[
+				"sublimerge",
+				"Sublimerge: View Diff"
+			],
+			[
+				"synt:xml",
+				"Set Syntax: XML"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"subli",
+				"SublimeREPL: Python"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"repl:p",
+				"SublimeREPL: Python"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"syn:py",
+				"Set Syntax: Python"
+			],
+			[
+				"may",
+				"Maya: Send Selection to Maya"
+			],
+			[
+				"maya",
+				"Maya: Send Selection to Maya"
+			],
+			[
+				"clas",
+				"Snippet: New Class"
+			],
+			[
+				"class",
+				"Snippet: New Class"
+			],
+			[
+				"cla",
+				"Snippet: New Class"
+			],
+			[
+				"Snippet: cl	",
+				"Snippet: New Class"
+			],
+			[
+				"Snippet: c",
+				"Snippet: New Class"
+			],
+			[
+				"sup",
+				"SublimeREPL: Python"
+			],
+			[
+				"sublimeREPL:Py",
+				"SublimeREPL: Python"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: New Property"
+			]
+		],
+		"width": 912.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-project",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/randomSize.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/gravityWars2d.sublime-project",
+		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-workspace",
+		"/Users/ianmankowski/Learning/Assets/scripts/throwAway/checkNearbyA.cs",
+		"/Users/ianmankowski/Documents/GITS/test/.git/config",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/guiLaunce_04.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/CarClasses/carClasses",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/PIEtemplate.py",
+		"/Users/ianmankowski/Documents/GITS/test/index.html",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Git GUI Clients.sublime-settings",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Terminal.sublime-settings",
+		"/Users/ianmankowski/Desktop/Athgo/3D/scenes/models/energyRing/WIP/energyRingBackDate.ma",
+		"/Users/ianmankowski/Google Drive/maya/2011-x64/scripts/nullBaker1.2.mel",
+		"/Users/ianmankowski/Downloads/bi_qtuiTemplate_01/bi_qtuiTemplate_01.ui",
+		"/Users/ianmankowski/Desktop/moreMaya2014.command",
+		"/Users/ianmankowski/Downloads/unFrozen-v1.0-.mel",
+		"/Users/ianmankowski/Downloads/RapidRig_Modular_V1_01_00/RapidRig_Modular.mel",
+		"/Users/ianmankowski/Library/Preferences/com.apple.dock.plist",
+		"/Users/ianmankowski/Google Drive/maya/scripts/sag_instancerToGeometry.py",
+		"/Users/ianmankowski/Desktop/blobbu/blobby.ma",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/PIEtemplate.pyc",
+		"/Users/ianmankowski/Downloads/modularRiggingSystem/shelves/Maya2014/shelf_creatureRigs.mel",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/MayaNodeInterface-master/ui/genControlAttr.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/MayaNodeInterface-master/ui/gui_from_designer.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/guiLaunce_02.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/guiLaunce.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/processArea.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/basicSubprocess.pyw",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignmentIan/listWidgetExtra_05.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/listWidgetExtra_02.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignmentIan/fileReader_4.pyw",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/tabWidget/tabWindow.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignment/assignment_infoWindow.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/infoWindow_01.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/infoModule_01.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/Week2/pyQTWindow03.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week5_code/infoModule.ui",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week5_code/infoModule.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week5_code/infoWindow.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week5_code/infoModule_01.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/listWidgetExtra.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/Blah blah",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/wrapDeform.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_3.ui",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_3.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_1.ui",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/infoWindow_3.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/testJunk01.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_1.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_2.ui",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_selectWindow_1.ui",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/Week2/pySideWindow.py",
+		"/Users/ianmankowski/Desktop/bashy/build_and_install_PyQt4.sh",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/Week2/pySideWindow02.py",
+		"/Applications/Autodesk/maya2014/Maya.app/Contents/bin/qt.conf",
+		"/Applications/Autodesk/maya2014/Maya.app/Contents/mkspecs/qt-4.8.2-64-mkspecs/qconfig copy.pri",
+		"/Applications/Autodesk/maya2014/Maya.app/Contents/mkspecs/qt-4.8.2-64-mkspecs/qconfig.pri",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/testJunk.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/inception02.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/NSA.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/command",
+		"/Users/ianmankowski/Downloads/ObjectCreatorTutorial/object_creator_tutorial.mel",
+		"/Users/ianmankowski/Downloads/ObjectCreatorTutorial/object_creator_tutorial.ui",
+		"/Users/ianmankowski/Documents/Learning/scripts/framework.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/pySideTest.py",
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/wrapDeform.ui",
+		"/Users/ianmankowski/Documents/Learning/scripts/testScene.meshData",
+		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter07/slider.py",
+		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter07/media/resources.qrc",
+		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter06/channelBox.py",
+		"/Users/ianmankowski/Documents/QT/calcWidget02.ui",
+		"/Users/ianmankowski/Documents/QT/calcWidget02.py",
+		"/Users/ianmankowski/Google Drive/maya/2013-x64/scripts/scaleWrapDeformer.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"how",
+			"could",
+			"terminal",
+			"nodeDropGraphicsView",
+			"graphicsView_wheelEvent",
+			"scale",
+			"setupUI",
+			"getMayaWindow",
+			"pri ",
+			"pri",
+			"priority",
+			"activeDirectory",
+			"ListWidget",
+			"QListWidget",
+			"ListWidget",
+			"TestButton",
+			"mainWidget",
+			"box",
+			"mainWidget",
+			"tranlation",
+			"QAbstract",
+			"scroll",
+			"chowder",
+			"SceneInfoWin",
+			"pymel.core",
+			"radius",
+			"f",
+			"Wheels",
+			"Doors",
+			"form",
+			"getMayaWindow",
+			"ListExample",
+			"PrimitiveUI",
+			"applejacks",
+			"uic",
+			"getMainWindow",
+			"sip"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self.activeDirectory",
+			"sortedList",
+			"guiWin",
+			"cmds",
+			"diameter",
+			"createUI"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/scripts/torpedo.cs",
+					"settings":
+					{
+						"buffer_size": 1378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								755,
+								755
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/playerControl.cs",
+					"settings":
+					{
+						"buffer_size": 215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/scripts/gravity.cs",
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/createPlanets.cs",
+					"settings":
+					{
+						"buffer_size": 3809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1727,
+								1727
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/enableScript.cs",
+					"settings":
+					{
+						"buffer_size": 360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/destroyOnCollision.cs",
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.776325134569,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 292.0
+	},
+	"output.rope_python_documentation":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true
+}
