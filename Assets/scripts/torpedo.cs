@@ -36,8 +36,6 @@ public class torpedo : MonoBehaviour
 	public bool mouseFire = false;
 	private gui guiScript;
 
-	drawLine drawControl;
-
 	private destroyOnCollision destroyScript;
 
 
@@ -50,7 +48,6 @@ public class torpedo : MonoBehaviour
 
 		sceneManager = GameObject.FindWithTag("gameManager");
 		guiScript = sceneManager.GetComponent<gui>();
-		drawControl = gameObject.GetComponentInParent<drawLine>();
 	}
 	
 	// Update is called once per frame
@@ -63,7 +60,6 @@ public class torpedo : MonoBehaviour
 				field.generalMultiplier = guiScript.lastPower;
 				rotateScript.enabled = false;
 				mouseFire = false;
-				drawControl.enabled = false;
 				shot();
 			}
 		}
@@ -84,6 +80,7 @@ public class torpedo : MonoBehaviour
 		Transform t = GameObject.Instantiate(bullet) as Transform;
 		t.position = transform.TransformPoint(pos);
 		t.rotation = transform.rotation;
+		playerState.instance.DisableInput();
 	}
 	
 	IEnumerator cooldown()

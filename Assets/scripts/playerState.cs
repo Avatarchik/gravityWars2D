@@ -48,6 +48,7 @@ public class playerState : MonoBehaviour {
 	{
 		shipA = GameObject.FindWithTag("Player");
 		shipB = GameObject.FindWithTag("Player2");
+
 		if (Camera.main.orthographicSize != 5)
 			Camera.main.orthographicSize = 5;
 
@@ -60,12 +61,17 @@ public class playerState : MonoBehaviour {
 
 		///Simply keeps track of how many turns have taken place///
 		if (player1 == true)
+		{
 			player1Stats += 1;
-
+			playerObject.collider2D.enabled = true;
+		}
 		else if (player2 == true)
-			player2Stats += 1;
+		{
+			player1Stats += 1;
+			playerObject2.collider2D.enabled = true;
+		}
 
-
+		
 		player1Switch = playerObject.GetComponentInChildren<enableScript>();
 		player2Switch = playerObject2.GetComponentInChildren<enableScript>();
 
@@ -82,6 +88,12 @@ public class playerState : MonoBehaviour {
 
 		player1Switch.playerSwitch(player1);
 		player2Switch.playerSwitch(player2);
+	}
+
+	public void DisableInput()
+	{
+		playerObject.collider2D.enabled = false;
+		playerObject2.collider2D.enabled = false;
 	}
 }
 
