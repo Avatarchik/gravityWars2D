@@ -63,12 +63,12 @@ public class playerState : MonoBehaviour {
 		if (player1 == true)
 		{
 			player1Stats += 1;
-			playerObject.collider2D.enabled = true;
+			playerObject.collider2D.enabled = true;				//enable user input for opposite player
 		}
 		else if (player2 == true)
 		{
 			player1Stats += 1;
-			playerObject2.collider2D.enabled = true;
+			playerObject2.collider2D.enabled = true;			//enable user input for opposite player
 		}
 
 		

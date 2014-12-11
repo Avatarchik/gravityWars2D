@@ -8,9 +8,12 @@ public class gui : MonoBehaviour {
     public int Player1TurnDisplay = 0;
     public int Player2TurnDisplay = 0;
 
+    private gui guiScript;
+    private GameObject sceneManager;
+
     void Update () 
     {
-        if (Input.GetMouseButton(0) || Input.GetKey("space"))
+        if (Input.GetKey("space"))
         {
             if (testNumber <= 100)
             {
@@ -22,7 +25,7 @@ public class gui : MonoBehaviour {
             }
             
         }
-        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
+        if (Input.GetKeyUp("space"))
         {
             lastPower = testNumber;
             testNumber = 0;

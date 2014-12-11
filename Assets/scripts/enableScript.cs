@@ -24,6 +24,7 @@ public class enableScript : MonoBehaviour
         {
             myScript.enabled = true;
             rotateScript.enabled = true;
+
         }
         else
         {
