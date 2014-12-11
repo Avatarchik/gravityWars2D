@@ -5,9 +5,13 @@ public class drawLine : MonoBehaviour {
 
 	public LineRenderer lineRender;
 	Vector3 reset = new Vector3(0,0,0);
-	//Vector3 direction;
+	float distance;
 
 	Vector3 firstPos;
+
+	Vector3 lineDirection;
+
+	public float radius = 2;
 
 	public Vector3 mousePos;
 	public Vector3 worldPos;
@@ -30,7 +34,11 @@ public class drawLine : MonoBehaviour {
 		mousePos = Input.mousePosition;
 		mousePos.z = 1.0f;
 		worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-		//distance = Vector3.Distance(firstPos, worldPos);
+
+		lineDirection = worldPos - firstPos;
+
+		//limit the line length
+		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
 
 		lineRender.SetPosition(0, firstPos);
 		lineRender.SetPosition(1, worldPos);
