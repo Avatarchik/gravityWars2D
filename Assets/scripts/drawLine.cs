@@ -32,6 +32,7 @@ public class drawLine : MonoBehaviour {
 		mousePos = Camera.main.WorldToScreenPoint(transform.position);
 		mousePos.z = 1.0f;
 		firstPos = Camera.main.ScreenToWorldPoint(mousePos);
+		worldPos = firstPos;
 	}
 	
 	void OnMouseDrag()
