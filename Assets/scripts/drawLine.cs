@@ -3,28 +3,37 @@ using System.Collections;
 
 public class drawLine : MonoBehaviour {
 
-	public LineRenderer lineRender;
-	Vector3 reset = new Vector3(0,0,0);
-	float distance;
-
-	Vector3 firstPos;
-
-	Vector3 lineDirection;
+	public LineRenderer lineRender;				//needs a lineRender to work
 
 	private gui guiScript;
     private GameObject sceneManager;
 
-	public float radius = 2;
+	public float radius = 2;					//limit to length of drawLine
+	float distance;								//length of the line
+	Vector3 lineDirection;						//vector of the line drawn.
 
-	public Vector3 mousePos;
-	public Vector3 worldPos;
+
+	//position of mouse, beginning and end.
+	Vector3 mousePos;					
+	Vector3 firstPos;
+	Vector3 worldPos;					
+
+	public GameObject targetingImage;					//grab the UI
+	CanvasGroup canvasGroup;
+
+
+	Vector3 reset = new Vector3(0,0,0);			//reset values.
 
 	torpedo childTorpedo;
+
+	//////////////////////////////////////////////////////////////////////////
 
 	void Start(){
 		childTorpedo = gameObject.GetComponentInChildren<torpedo>();
         sceneManager = GameObject.FindWithTag("gameManager");
         guiScript = sceneManager.GetComponent<gui>();
+        targetingImage = GameObject.Find("targetingImage");
+        canvasGroup = targetingImage.GetComponent<CanvasGroup>();
 	}
 	
 	void OnMouseDown() 
@@ -33,6 +42,9 @@ public class drawLine : MonoBehaviour {
 		mousePos.z = 1.0f;
 		firstPos = Camera.main.ScreenToWorldPoint(mousePos);
 		worldPos = firstPos;
+
+		targetingImage.transform.position = mousePos;
+		canvasGroup.alpha = 1;
 	}
 	
 	void OnMouseDrag()
@@ -60,5 +72,6 @@ public class drawLine : MonoBehaviour {
 		lineRender.SetPosition(0, reset);
 		lineRender.SetPosition(1, reset);
 		childTorpedo.mouseFire = true;
+		canvasGroup.alpha = 0; 
 	}
 }
