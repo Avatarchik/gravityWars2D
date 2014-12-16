@@ -28,6 +28,8 @@ public class playerState : MonoBehaviour {
 	GameObject shipA;
 	GameObject shipB;
 
+	public float defaultCamera;			//get the initial state of the camera
+
 
 	//This bit here turns this into a singleton
 	private static playerState _instance;
@@ -49,8 +51,8 @@ public class playerState : MonoBehaviour {
 		shipA = GameObject.FindWithTag("Player");
 		shipB = GameObject.FindWithTag("Player2");
 
-		if (Camera.main.orthographicSize != 5)
-			Camera.main.orthographicSize = 5;
+		if (Camera.main.orthographicSize != defaultCamera)
+			Camera.main.orthographicSize = defaultCamera;
 
 		//need to activate the torpedo gravity fields again.
 		shipA.GetComponentInChildren<ForceField2D>().enabled = true;
@@ -94,6 +96,11 @@ public class playerState : MonoBehaviour {
 	{
 		playerObject.collider2D.enabled = false;
 		playerObject2.collider2D.enabled = false;
+	}
+
+	public void Start()
+	{
+		defaultCamera = Camera.main.orthographicSize;
 	}
 }
 

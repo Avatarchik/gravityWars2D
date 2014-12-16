@@ -41,8 +41,6 @@ public class createPlanets : MonoBehaviour {
 	//enableScript for ship
 	private enableScript whichPlayer;
 
-	public playerState playerstate;
-
 	private float totalMass = 0f;
 
 

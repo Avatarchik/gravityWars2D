@@ -326,8 +326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRender: {fileID: 12000000}
-  radius: 7
+  radius: 3.20000005
   targetingImage: {fileID: 0}
+  imageScale: {x: 1, y: 1, z: 1}
+  screenScale: 6
+  smoothing: 10
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1

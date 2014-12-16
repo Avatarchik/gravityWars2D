@@ -21,7 +21,8 @@ public class drawLine : MonoBehaviour {
 	public GameObject targetingImage;			//grab the UI
 	CanvasGroup canvasGroup;
 
-
+	public Vector3 imageScale = new Vector3(1,1,1);
+	public float screenScale = 5.7f;			//how much to scale the screen (past 5)
 	Vector3 reset = new Vector3(0,0,0);			//reset values.
 
 	torpedo childTorpedo;
@@ -34,7 +35,7 @@ public class drawLine : MonoBehaviour {
 		childTorpedo = gameObject.GetComponentInChildren<torpedo>();
         sceneManager = GameObject.FindWithTag("gameManager");
         guiScript = sceneManager.GetComponent<gui>();
-        targetingImage = GameObject.Find("targetingImage");
+        targetingImage = GameObject.Find("targetReticle");
         canvasGroup = targetingImage.GetComponent<CanvasGroup>();
 	}
 	
@@ -45,7 +46,8 @@ public class drawLine : MonoBehaviour {
 		firstPos = Camera.main.ScreenToWorldPoint(mousePos);
 		worldPos = firstPos;
 
-		targetingImage.transform.position = mousePos;
+		targetingImage.transform.position = worldPos;
+
 		StartCoroutine("smoothAlpha");
 	}
 	
@@ -85,8 +87,9 @@ public class drawLine : MonoBehaviour {
 	{
 		while(canvasGroup.alpha < 1)
 		{
+			//Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, screenScale, smoothing * Time.deltaTime);
 			canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1, smoothing * Time.deltaTime);
-			targetingImage.transform.localScale = Vector3.Lerp(targetingImage.transform.localScale, new Vector3(6,6,6), smoothing * Time.deltaTime);
+			targetingImage.transform.localScale = Vector3.Lerp(targetingImage.transform.localScale, imageScale, smoothing * Time.deltaTime);
 
 			yield return null;
 		}		
