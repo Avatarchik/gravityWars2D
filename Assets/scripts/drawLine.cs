@@ -18,13 +18,15 @@ public class drawLine : MonoBehaviour {
 	Vector3 firstPos;
 	Vector3 worldPos;					
 
-	public GameObject targetingImage;					//grab the UI
+	public GameObject targetingImage;			//grab the UI
 	CanvasGroup canvasGroup;
 
 
 	Vector3 reset = new Vector3(0,0,0);			//reset values.
 
 	torpedo childTorpedo;
+
+	public float smoothing = 0f;				//Lerp modifier.
 
 	//////////////////////////////////////////////////////////////////////////
 
@@ -44,7 +46,7 @@ public class drawLine : MonoBehaviour {
 		worldPos = firstPos;
 
 		targetingImage.transform.position = mousePos;
-		canvasGroup.alpha = 1;
+		StartCoroutine("smoothAlpha");
 	}
 	
 	void OnMouseDrag()
@@ -72,6 +74,21 @@ public class drawLine : MonoBehaviour {
 		lineRender.SetPosition(0, reset);
 		lineRender.SetPosition(1, reset);
 		childTorpedo.mouseFire = true;
+
+		//stop the coroutine and reset the values.
+		StopCoroutine("smoothAlpha");
 		canvasGroup.alpha = 0; 
+		targetingImage.transform.localScale = new Vector3(0,0,0);
+	}
+	
+	IEnumerator smoothAlpha()
+	{
+		while(canvasGroup.alpha < 1)
+		{
+			canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1, smoothing * Time.deltaTime);
+			targetingImage.transform.localScale = Vector3.Lerp(targetingImage.transform.localScale, new Vector3(6,6,6), smoothing * Time.deltaTime);
+
+			yield return null;
+		}		
 	}
 }
