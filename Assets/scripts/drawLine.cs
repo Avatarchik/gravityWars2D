@@ -64,14 +64,17 @@ public class drawLine : MonoBehaviour {
 
 		lineRender.SetPosition(0, firstPos);
 		lineRender.SetPosition(1, worldPos);
+
+		distance = Vector3.Distance(firstPos, worldPos);
+		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
+		guiScript.testNumber = (int)normalizeDistance;
 	}
 
 	void OnMouseUp()
 	{
-		distance = Vector3.Distance(firstPos, worldPos);
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
-
 		guiScript.lastPower = (int)normalizeDistance;			//send the power of the torpedo to the guiScript
+		guiScript.testNumber = 0;								//reset testNumber to 0
 
 		lineRender.SetPosition(0, reset);
 		lineRender.SetPosition(1, reset);
