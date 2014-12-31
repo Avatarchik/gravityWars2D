@@ -49,7 +49,7 @@ public class createPlanets : MonoBehaviour {
 	/// </summary>
 	/// <param name="worldPos">World position.</param>
 	/// <param name="randomScale">Random scale.</param>
-	void planetCreate(ref Vector2 worldPos, ref float randomScale)
+	void planetCreate(Vector2 worldPos, float randomScale)
 	{
 		//instantiate a planet
 		planet = Instantiate(planet, worldPos, Quaternion.identity) as GameObject;
@@ -137,6 +137,8 @@ public class createPlanets : MonoBehaviour {
 		}
 	}
 
+		//enum PlayerOrder {FirstPlayer, SecondPlayer};
+		//PlayerOrder currentTurn;
 
 	//gives us the ship position accounting for our screen's borders
 	//Inputs: side of screen the ship will be on.
@@ -145,11 +147,11 @@ public class createPlanets : MonoBehaviour {
 	{
 		if (side == "left")
 		{
-			position = new Vector2((Screen.width/borderMargin), Random.Range((Screen.height/(borderMargin*.5f)), ((borderMargin*Screen.height)/borderMargin)));
+			position = new Vector2((Screen.width/borderMargin), Random.Range((Screen.height/(borderMargin)), ((borderMargin*Screen.height)/borderMargin)));
 		}
 		if (side == "right")
 		{
-			position = new Vector2(((borderMargin-1)*Screen.width/borderMargin), Random.Range((Screen.height/(borderMargin*.5f)), (((borderMargin-1)*Screen.height)/borderMargin)));
+			position = new Vector2(((borderMargin-1)*Screen.width/borderMargin), Random.Range((Screen.height/(borderMargin)), (((borderMargin-1)*Screen.height)/borderMargin)));
 
 		}
 		return position;
@@ -174,7 +176,7 @@ public class createPlanets : MonoBehaviour {
 				position = new Vector2(Random.Range(0.0f, Screen.width), Random.Range(0.0f, Screen.height));
 				placeData (position, out worldPos, out randomScale);
 			}
-			planetCreate(ref worldPos, ref randomScale);
+			planetCreate(worldPos, randomScale);
 			totalMass += mathTools.Remap(randomScale, .25f, 3f, 0, 10f);
 
 
