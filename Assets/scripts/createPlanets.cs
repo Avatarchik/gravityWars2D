@@ -19,6 +19,7 @@ public class createPlanets : MonoBehaviour {
 	public GameObject ship;
 
 	//placeData
+	float borderHeight;
 	Vector2 position;
 	Vector2 worldPos;
 	float randomScale;
@@ -137,17 +138,19 @@ public class createPlanets : MonoBehaviour {
 		}
 	}
 
-		//enum PlayerOrder {FirstPlayer, SecondPlayer};
-		//PlayerOrder currentTurn;
 
 	//gives us the ship position accounting for our screen's borders
 	//Inputs: side of screen the ship will be on.
 	//Returns: the position of the ship.
 	Vector2 shipPosition(string side)
 	{
+		borderHeight = Screen.height/borderMargin;
+
 		if (side == "left")
 		{
-			position = new Vector2((Screen.width/borderMargin), Random.Range((Screen.height/(borderMargin)), ((borderMargin*Screen.height)/borderMargin)));
+			position = new Vector2((Screen.width/borderMargin), 
+				Random.Range(borderHeight, 
+				(((borderMargin*Screen.height)/borderMargin)-borderHeight)));
 		}
 		if (side == "right")
 		{
