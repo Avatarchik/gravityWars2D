@@ -15,10 +15,12 @@ public class drawLine : MonoBehaviour {
 
 	//position of mouse, beginning and end.
 	Vector3 mousePos;					
+	Vector3 worldPos;
 	Vector3 firstPos;
-	Vector3 worldPos;					
+					
 
 	public GameObject targetingImage;			//grab the UI
+	playerState playerState;
 	CanvasGroup canvasGroup;
 
 	public Vector3 imageScale = new Vector3(1,1,1);
@@ -37,6 +39,7 @@ public class drawLine : MonoBehaviour {
         guiScript = sceneManager.GetComponent<gui>();
         targetingImage = GameObject.Find("targetReticle");
         canvasGroup = targetingImage.GetComponent<CanvasGroup>();
+        playerState = sceneManager.GetComponent<playerState>();
 	}
 	
 	void OnMouseDown() 

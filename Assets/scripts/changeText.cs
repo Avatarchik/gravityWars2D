@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
-//this is a change
 
 public class changeText : MonoBehaviour {
 	private Text canvasText;
 	private CanvasGroup canvasGroup;
+
 
 
  	public void messageState(string tag)

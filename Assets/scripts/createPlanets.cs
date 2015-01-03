@@ -17,6 +17,7 @@ public class createPlanets : MonoBehaviour {
 	//object to instantiate
 	public GameObject planet;
 	public GameObject ship;
+	private GameObject subShip;						//the gameObject hierarchy underneath the ship
 
 	//placeData
 	float borderHeight;
@@ -107,7 +108,9 @@ public class createPlanets : MonoBehaviour {
 		ship.collider2D.enabled = engagedState;								//set the input status on the ship
 		ship.name = shipName;
 		ship.tag = playerTag;											
-		ship.transform.parent = playerGroup.transform;	
+		ship.transform.parent = playerGroup.transform;
+		subShip = ship.transform.GetChild(0).gameObject;	
+		subShip.tag = playerTag;
 		playerGroup.transform.parent = gameManager.transform;				//parent to playerGroup
 
 
