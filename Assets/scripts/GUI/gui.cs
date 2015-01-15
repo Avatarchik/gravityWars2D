@@ -11,6 +11,8 @@ public class gui : MonoBehaviour {
     private gui guiScript;
     private GameObject sceneManager;
 
+    public GameObject image;
+
     void Update () 
     {
         if (Input.GetKey("space"))

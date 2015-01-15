@@ -2,16 +2,17 @@
 using System.Collections;
 
 public class torpedoPosition : MonoBehaviour {
-	Vector3 myPosition;										//target to track's position
+	Vector3 myPosition;												//target to track's position
 	
-	public float sizeFaction = 0;
+	public float cameraDefaultScale = 6.25f;
+
 	public float smoothOut = 1f;									//factor to smooth out by
 	float newSmoothOut = .5f;
 	public float smoothIn = 1f;										//factor to smooth in by
 	float smoother = 1f;											//smooth the factor
 
 	// Use this for initialization
-	void LateUpdate () {
+	void Update () {
 	
 		myPosition = Camera.main.WorldToViewportPoint(transform.position);
 
@@ -30,9 +31,9 @@ public class torpedoPosition : MonoBehaviour {
 
 		else
 		{
-			if (Camera.main.orthographicSize > 5)					//if the camera size is greater then our default
+			if (Camera.main.orthographicSize > cameraDefaultScale)					//if the camera size is greater then our default
 			{
-				Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5, smoothIn * Time.deltaTime);	
+				Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, cameraDefaultScale, smoothIn * Time.deltaTime);	
 
 			}
 		}

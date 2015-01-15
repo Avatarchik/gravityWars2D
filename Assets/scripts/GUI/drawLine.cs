@@ -13,14 +13,16 @@ public class drawLine : MonoBehaviour {
 	Vector3 lineDirection;						//vector of the line drawn.
 
 
-	//position of mouse, beginning and end.
 	Vector3 mousePos;					
-	Vector3 worldPos;
 	Vector3 firstPos;
+	Vector3 worldPos;
+
+	//GameObject actionCenter;					DELete
+	//gameCenter gameCenterScript;				DELETE
+
 					
 
 	public GameObject targetingImage;			//grab the UI
-	playerState playerState;
 	CanvasGroup canvasGroup;
 
 	public Vector3 imageScale = new Vector3(1,1,1);
@@ -39,7 +41,6 @@ public class drawLine : MonoBehaviour {
         guiScript = sceneManager.GetComponent<gui>();
         targetingImage = GameObject.Find("targetReticle");
         canvasGroup = targetingImage.GetComponent<CanvasGroup>();
-        playerState = sceneManager.GetComponent<playerState>();
 	}
 	
 	void OnMouseDown() 
@@ -77,7 +78,8 @@ public class drawLine : MonoBehaviour {
 	{
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
 		guiScript.lastPower = (int)normalizeDistance;			//send the power of the torpedo to the guiScript
-		guiScript.testNumber = 0;								//reset testNumber to 0
+
+		guiScript.testNumber = 0;
 
 		lineRender.SetPosition(0, reset);
 		lineRender.SetPosition(1, reset);
@@ -86,7 +88,7 @@ public class drawLine : MonoBehaviour {
 		//stop the coroutine and reset the values.
 		StopCoroutine("smoothAlpha");
 		canvasGroup.alpha = 0; 
-		targetingImage.transform.localScale = new Vector3(0,0,0);
+		targetingImage.transform.localScale = reset;
 	}
 	
 	IEnumerator smoothAlpha()

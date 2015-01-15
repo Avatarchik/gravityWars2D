@@ -28,7 +28,9 @@ public class playerState : MonoBehaviour {
 	GameObject shipA;
 	GameObject shipB;
 
-	public float defaultCamera;			//get the initial state of the camera
+	GameObject actionCenter;					
+	gameCenter gameCenterScript;
+	resetCamera resetCameraScript;
 
 
 	//This bit here turns this into a singleton
@@ -50,10 +52,7 @@ public class playerState : MonoBehaviour {
 	{
 		shipA = GameObject.FindWithTag("Player");
 		shipB = GameObject.FindWithTag("Player2");
-
-		if (Camera.main.orthographicSize != defaultCamera)
-			Camera.main.orthographicSize = defaultCamera;
-
+		
 		//need to activate the torpedo gravity fields again.
 		shipA.GetComponentInChildren<ForceField2D>().enabled = true;
 		shipB.GetComponentInChildren<ForceField2D>().enabled = true;
@@ -61,16 +60,21 @@ public class playerState : MonoBehaviour {
 		player1 = !player1;
 		player2 = !player2;	
 
+		resetCameraScript.smoothResetCamera();
+		
 		///Simply keeps track of how many turns have taken place///
 		if (player1 == true)
 		{
 			player1Stats += 1;
 			playerObject.collider2D.enabled = true;				//enable user input for opposite player
+			gameCenterScript.updateCenterOfInterest(shipA);
 		}
 		else if (player2 == true)
 		{
 			player1Stats += 1;
 			playerObject2.collider2D.enabled = true;			//enable user input for opposite player
+			gameCenterScript.updateCenterOfInterest(shipB);
+
 		}
 
 		
@@ -94,13 +98,17 @@ public class playerState : MonoBehaviour {
 
 	public void DisableInput()
 	{
+		gameCenterScript.resetCenterOfInterest();
+
 		playerObject.collider2D.enabled = false;
 		playerObject2.collider2D.enabled = false;
 	}
 
 	public void Start()
 	{
-		defaultCamera = Camera.main.orthographicSize;
+		actionCenter = GameObject.Find("actionCenter");
+		gameCenterScript = actionCenter.GetComponent<gameCenter>();
+		resetCameraScript = Camera.main.GetComponent<resetCamera>();
 	}
 }
 
