@@ -18,6 +18,7 @@ public class createPlanets : MonoBehaviour {
 	public GameObject planet;
 	public GameObject ship;
 	private GameObject subShip;						//the gameObject hierarchy underneath the ship
+	private GameObject startShip;
 
 	//placeData
 	float borderHeight;
@@ -42,6 +43,11 @@ public class createPlanets : MonoBehaviour {
 
 	//enableScript for ship
 	private enableScript whichPlayer;
+
+	GameObject actionCenter;					
+	gameCenter gameCenterScript;
+
+	public float seconds = 1.5f;
 
 	private float totalMass = 0f;
 
@@ -171,6 +177,10 @@ public class createPlanets : MonoBehaviour {
 		playerGroup = new GameObject("playerGroup");
 		gameManager = GameObject.FindWithTag("gameManager");
 
+		actionCenter = GameObject.Find("actionCenter");
+		gameCenterScript = actionCenter.GetComponent<gameCenter>();
+
+
 		for(int i = 0; i < numberOfPlanets; i++)
 		{
 			//random placement of planet
@@ -200,6 +210,8 @@ public class createPlanets : MonoBehaviour {
 
 		createShip(worldPos, 1);					//Player 1 ship
 
+		StartCoroutine(Wait(seconds));
+
 		shipPosition("right");
 		placeData(position, out worldPos, out randomScale);
 		
@@ -209,6 +221,15 @@ public class createPlanets : MonoBehaviour {
 		}
 
 		createShip(worldPos, 2);					//Player 2 ship
+
+		
+
+	}
+
+	IEnumerator Wait(float seconds){
+		startShip = ship;
+		yield return new WaitForSeconds (seconds);
+		gameCenterScript.updateCenterOfInterest(startShip);
 
 	}
 }

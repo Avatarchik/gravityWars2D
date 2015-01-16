@@ -104,6 +104,8 @@ public class playerState : MonoBehaviour {
 		playerObject2.collider2D.enabled = false;
 	}
 
+
+
 	public void Start()
 	{
 		actionCenter = GameObject.Find("actionCenter");
