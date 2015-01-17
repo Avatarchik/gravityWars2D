@@ -1076,6 +1076,7 @@ MonoBehaviour:
   ship: {fileID: 100000, guid: aa9ac1f1597fe4850aa5614a570998ef, type: 2}
   turnSpeedSet: 0
   borderMargin: 8
+  seconds: 1.5
 --- !u!4 &1859833059
 Transform:
   m_ObjectHideFlags: 0
