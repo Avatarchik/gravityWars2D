@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class drawLine : MonoBehaviour {
@@ -17,13 +17,8 @@ public class drawLine : MonoBehaviour {
 	Vector3 firstPos;
 	Vector3 worldPos;
 
-	//GameObject actionCenter;					DELete
-	//gameCenter gameCenterScript;				DELETE
-
-					
-
-	public GameObject targetingImage;			//grab the UI
-	CanvasGroup canvasGroup;
+	public GameObject targetingPanel;
+	CanvasGroup targetingPanelCanvasGroup;
 
 	public Vector3 imageScale = new Vector3(1,1,1);
 	public float screenScale = 5.7f;			//how much to scale the screen (past 5)
@@ -33,14 +28,18 @@ public class drawLine : MonoBehaviour {
 
 	public float smoothing = 0f;				//Lerp modifier.
 
+
+
 	//////////////////////////////////////////////////////////////////////////
 
 	void Start(){
 		childTorpedo = gameObject.GetComponentInChildren<torpedo>();
         sceneManager = GameObject.FindWithTag("gameManager");
         guiScript = sceneManager.GetComponent<gui>();
-        targetingImage = GameObject.Find("targetReticle");
-        canvasGroup = targetingImage.GetComponent<CanvasGroup>();
+
+        targetingPanel = GameObject.Find("targeting_panel");
+        targetingPanelCanvasGroup = targetingPanel.GetComponent<CanvasGroup>();
+
 	}
 	
 	void OnMouseDown() 
@@ -50,9 +49,10 @@ public class drawLine : MonoBehaviour {
 		firstPos = Camera.main.ScreenToWorldPoint(mousePos);
 		worldPos = firstPos;
 
-		targetingImage.transform.position = worldPos;
+		targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
 
 		StartCoroutine("smoothAlpha");
+
 	}
 	
 	void OnMouseDrag()
@@ -87,19 +87,20 @@ public class drawLine : MonoBehaviour {
 
 		//stop the coroutine and reset the values.
 		StopCoroutine("smoothAlpha");
-		canvasGroup.alpha = 0; 
-		targetingImage.transform.localScale = reset;
+		targetingPanelCanvasGroup.alpha = 0; 
+		targetingPanel.transform.localScale = reset;
 	}
+	
 	
 	IEnumerator smoothAlpha()
 	{
-		while(canvasGroup.alpha < 1)
+		while(targetingPanelCanvasGroup.alpha < 1)
 		{
-			//Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, screenScale, smoothing * Time.deltaTime);
-			canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1, smoothing * Time.deltaTime);
-			targetingImage.transform.localScale = Vector3.Lerp(targetingImage.transform.localScale, imageScale, smoothing * Time.deltaTime);
+			targetingPanelCanvasGroup.alpha = Mathf.Lerp(targetingPanelCanvasGroup.alpha, 1, smoothing * Time.deltaTime);
+			targetingPanel.transform.localScale = Vector3.Lerp(targetingPanel.transform.localScale, imageScale, smoothing * Time.deltaTime);
 
 			yield return null;
 		}		
 	}
+	
 }

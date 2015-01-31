@@ -111,7 +111,7 @@ public class createPlanets : MonoBehaviour {
 
 		}
 		ship = Instantiate(ship, worldPos, shipRotate) as GameObject;
-		ship.collider2D.enabled = engagedState;								//set the input status on the ship
+		//ship.collider2D.enabled = engagedState;								//set the input status on the ship
 		ship.name = shipName;
 		ship.tag = playerTag;											
 		ship.transform.parent = playerGroup.transform;
@@ -230,6 +230,7 @@ public class createPlanets : MonoBehaviour {
 		startShip = ship;
 		yield return new WaitForSeconds (seconds);
 		gameCenterScript.updateCenterOfInterest(startShip);
+		startShip.collider2D.enabled = true;
 
 	}
 }
