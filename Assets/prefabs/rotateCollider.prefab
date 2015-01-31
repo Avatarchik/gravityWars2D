@@ -184,7 +184,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .5
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRender: {fileID: 12000000}
   radius: 3.20000005
-  targetingImage: {fileID: 0}
+  targetingPanel: {fileID: 0}
   imageScale: {x: 1, y: 1, z: 1}
   screenScale: 6
   smoothing: 10
