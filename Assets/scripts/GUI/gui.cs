@@ -6,24 +6,29 @@ public class gui : MonoBehaviour {
     public int testNumber = 0;
     public int lastPower = 0;
 
-    void Update () 
-    {
-        if (Input.GetKey("space"))
-        {
-            if (testNumber <= 100)
-            {
-                testNumber += 1;  
-            }
-            else 
-            {
-                testNumber = 100;
-            }
-            
-        }
-        if (Input.GetKeyUp("space"))
-        {
-            lastPower = testNumber;
-            testNumber = 0;
-        }
+    public int targetingAngle = 0;
+    public int oldTargetingAngle;
+
+    public bool updateFlag = false;
+
+    
+    void Update () {
+        checkChange(testNumber, lastPower);
+        checkChange(targetingAngle, oldTargetingAngle);
     }
+
+    void checkChange(int variableOne, int variableTwo){
+        if (variableOne != variableTwo)
+        {
+            variableOne = variableTwo;
+            updateFlag = true;  
+        }
+        else
+        {
+            updateFlag = false;
+        }
+        
+    }
+    
+
 }

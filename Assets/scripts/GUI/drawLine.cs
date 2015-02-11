@@ -11,7 +11,7 @@ public class drawLine : MonoBehaviour {
 	public float radius = 2;					//limit to length of drawLine
 	float distance;								//length of the line
 	Vector3 lineDirection;						//vector of the line drawn.
-
+	Vector3 upVector = new Vector3(0,1,0);
 
 	Vector3 mousePos;					
 	Vector3 firstPos;
@@ -30,6 +30,7 @@ public class drawLine : MonoBehaviour {
 
 
 
+
 	//////////////////////////////////////////////////////////////////////////
 
 	void Start(){
@@ -39,6 +40,7 @@ public class drawLine : MonoBehaviour {
 
         targetingPanel = GameObject.Find("targeting_panel");
         targetingPanelCanvasGroup = targetingPanel.GetComponent<CanvasGroup>();
+
 
 	}
 	
@@ -69,6 +71,9 @@ public class drawLine : MonoBehaviour {
 		lineRender.SetPosition(0, firstPos);
 		lineRender.SetPosition(1, worldPos);
 
+		float angle = Vector3.Angle(upVector, lineDirection);
+		guiScript.targetingAngle = (int)angle;
+
 		distance = Vector3.Distance(firstPos, worldPos);
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
 		guiScript.testNumber = (int)normalizeDistance;
@@ -84,6 +89,10 @@ public class drawLine : MonoBehaviour {
 		lineRender.SetPosition(0, reset);
 		lineRender.SetPosition(1, reset);
 		childTorpedo.mouseFire = true;
+
+		float directionDegrees = Vector3.Angle(transform.right, lineDirection);
+		guiScript.oldTargetingAngle = (int)directionDegrees;
+		guiScript.targetingAngle = 0;
 
 		//stop the coroutine and reset the values.
 		StopCoroutine("smoothAlpha");

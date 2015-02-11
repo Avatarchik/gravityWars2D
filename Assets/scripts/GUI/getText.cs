@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class getText : MonoBehaviour {
 	private Text canvasText;
 	public GameObject sceneManager;
-	public int displayInt;
-	public int oldInt = 0;
-
-
+	int displayInt;
+	int oldInt = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -19,18 +17,18 @@ public class getText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		displayInt = sceneManager.GetComponent<gui>().testNumber;
+		if (sceneManager.GetComponent<gui>().updateFlag == true){
 
-		if (oldInt != displayInt)
-		{
-			oldInt = displayInt;
-			if (oldInt == 0)
-				canvasText.text = "";
-			else	
-				canvasText.text = oldInt.ToString();
-
+			updateValues(sceneManager.GetComponent<gui>().testNumber);
 		}
+	}
+	void updateValues(int number){
+		displayInt = number;
 
-	
+			if (oldInt != displayInt){
+				oldInt = displayInt;
+				canvasText.text = oldInt.ToString();
+			}
+			
 	}
 }
