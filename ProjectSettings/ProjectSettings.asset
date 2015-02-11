@@ -7,8 +7,8 @@ PlayerSettings:
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 1
-  targetGlesGraphics: 1
-  targetResolution: 7
+  targetGlesGraphics: -1
+  targetResolution: 0
   accelerometerFrequency: 0
   companyName: DefaultCompany
   productName: gravityWars2D
