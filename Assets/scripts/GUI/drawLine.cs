@@ -72,7 +72,14 @@ public class drawLine : MonoBehaviour {
 		lineRender.SetPosition(1, worldPos);
 
 		float angle = Vector3.Angle(upVector, lineDirection);
+		if (lineDirection.x < 0)
+		{
+			angle = 360 - angle;
+		}
+		
 		guiScript.targetingAngle = (int)angle;
+		
+		
 
 		distance = Vector3.Distance(firstPos, worldPos);
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 

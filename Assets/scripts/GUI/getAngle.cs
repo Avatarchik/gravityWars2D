@@ -27,7 +27,7 @@ public class getAngle : MonoBehaviour {
 
 			if (oldInt != displayInt){
 				oldInt = displayInt;
-				canvasText.text = oldInt.ToString();
+				canvasText.text = oldInt.ToString()+ '°';
 			}
 			
 	}
