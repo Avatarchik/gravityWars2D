@@ -28,6 +28,9 @@ public class drawLine : MonoBehaviour {
 
 	public float smoothing = 0f;				//Lerp modifier.
 
+	GameObject targetingMemory;
+	targetMemoryLifespan targetingMemoryIncrement;
+
 
 
 
@@ -40,6 +43,9 @@ public class drawLine : MonoBehaviour {
 
         targetingPanel = GameObject.Find("targeting_panel");
         targetingPanelCanvasGroup = targetingPanel.GetComponent<CanvasGroup>();
+
+        targetingMemory = GameObject.Find("targetMemory");
+        targetingMemoryIncrement = targetingMemory.GetComponent<targetMemoryLifespan>();
 
 
 	}
@@ -104,6 +110,10 @@ public class drawLine : MonoBehaviour {
 		//stop the coroutine and reset the values.
 		StopCoroutine("smoothAlpha");
 		targetingPanelCanvasGroup.alpha = 0; 
+
+		targetingMemory.transform.position = mousePos;
+		targetingMemoryIncrement.incrementIndex();
+
 		targetingPanel.transform.localScale = reset;
 	}
 	
