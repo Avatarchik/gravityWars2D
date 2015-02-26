@@ -28,8 +28,7 @@ public class drawLine : MonoBehaviour {
 
 	public float smoothing = 0f;				//Lerp modifier.
 
-	GameObject targetingMemory;
-	targetMemoryLifespan targetingMemoryIncrement;
+	createTargetMemory targetingPanelCreateMemory;
 
 
 
@@ -43,9 +42,7 @@ public class drawLine : MonoBehaviour {
 
         targetingPanel = GameObject.Find("targeting_panel");
         targetingPanelCanvasGroup = targetingPanel.GetComponent<CanvasGroup>();
-
-        targetingMemory = GameObject.Find("targetMemory");
-        targetingMemoryIncrement = targetingMemory.GetComponent<targetMemoryLifespan>();
+        targetingPanelCreateMemory = targetingPanel.GetComponent<createTargetMemory>();
 
 
 	}
@@ -111,8 +108,10 @@ public class drawLine : MonoBehaviour {
 		StopCoroutine("smoothAlpha");
 		targetingPanelCanvasGroup.alpha = 0; 
 
-		targetingMemory.transform.position = mousePos;
-		targetingMemoryIncrement.incrementIndex();
+		targetingPanelCreateMemory.activateMemoryObject();
+		targetingPanelCreateMemory.fadeAlpha();
+		targetingPanelCreateMemory.setPosition(mousePos);
+		
 
 		targetingPanel.transform.localScale = reset;
 	}
