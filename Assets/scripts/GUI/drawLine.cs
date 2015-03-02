@@ -42,6 +42,7 @@ public class drawLine : MonoBehaviour {
 
         targetingPanel = GameObject.Find("targeting_panel");
         targetingPanelCanvasGroup = targetingPanel.GetComponent<CanvasGroup>();
+
         targetingPanelCreateMemory = targetingPanel.GetComponent<createTargetMemory>();
 
 
@@ -70,6 +71,8 @@ public class drawLine : MonoBehaviour {
 
 		//limit the line length
 		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
+
+		mousePos = Camera.main.WorldToScreenPoint(worldPos);
 
 		lineRender.SetPosition(0, firstPos);
 		lineRender.SetPosition(1, worldPos);
@@ -109,10 +112,8 @@ public class drawLine : MonoBehaviour {
 		targetingPanelCanvasGroup.alpha = 0; 
 
 		targetingPanelCreateMemory.activateMemoryObject();
-		targetingPanelCreateMemory.fadeAlpha();
-		targetingPanelCreateMemory.setPosition(mousePos);
+		targetingPanelCreateMemory.fadeAlpha(mousePos);
 		
-
 		targetingPanel.transform.localScale = reset;
 	}
 	

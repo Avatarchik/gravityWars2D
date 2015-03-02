@@ -16,6 +16,8 @@ public class playerState : MonoBehaviour {
 	public bool player1 = true;
 	public bool player2 = false;
 
+	public string activePlayer = "Player";
+
 	public int player1Stats = 0;
 	public int player2Stats = 0;
 
@@ -77,6 +79,7 @@ public class playerState : MonoBehaviour {
 			playerObject.collider2D.enabled = true;				//enable user input for opposite player
 			gameCenterScript.updateCenterOfInterest(shipA);
 			targetingPanel_A_CanvasGroup.alpha = 1;
+			activePlayer = "Player";
 		}
 		else if (player2 == true)
 		{
@@ -84,6 +87,7 @@ public class playerState : MonoBehaviour {
 			playerObject2.collider2D.enabled = true;			//enable user input for opposite player
 			gameCenterScript.updateCenterOfInterest(shipB);
 			targetingPanel_B_CanvasGroup.alpha = 1;
+			activePlayer = "Player2";
 
 		}
 

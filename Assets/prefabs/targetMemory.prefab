@@ -11,13 +11,25 @@ GameObject:
   - 222: {fileID: 22225142}
   - 114: {fileID: 11425142}
   - 225: {fileID: 22525142}
+  - 114: {fileID: 11407088}
   m_Layer: 5
   m_Name: targetMemory
-  m_TagString: Untagged
+  m_TagString: targetMemory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11407088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b3f062b2ab94d34b9ca0034a2d1a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11425142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +81,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125142}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
