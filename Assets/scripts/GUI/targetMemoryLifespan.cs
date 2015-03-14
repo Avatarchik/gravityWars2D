@@ -2,10 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class targetMemoryLifespan : MonoBehaviour {
-	private float alpha = 1f;
-	public playerState activePlayerScript;
-	
-	public string currentPlayer;
+	playerState activePlayerScript;
+	int order = 0;
 
 	GameObject sceneManager;
 
@@ -15,15 +13,22 @@ public class targetMemoryLifespan : MonoBehaviour {
 		activePlayerScript = sceneManager.GetComponent<playerState>();
 
 		if (activePlayerScript.activePlayer == gameObject.tag)
-			{
-				alpha *= .5f;
-				gameObject.GetComponent<CanvasGroup>().alpha = alpha;
-
-				if (alpha < .1f)
-					alpha = 1f;
-
-				if (alpha >= .5f)
+		{
+			switch (order)
+			{	
+				case 0:
+					gameObject.GetComponent<CanvasGroup>().alpha = .5f;
 					transform.position = position;
+					break;
+				case 1:
+					gameObject.GetComponent<CanvasGroup>().alpha = .25f;
+					break;
+				case 2:
+					gameObject.GetComponent<CanvasGroup>().alpha = .125f;
+					order = -1;
+					break;
 			}	
+			order++;
+		}
 	}
 }
