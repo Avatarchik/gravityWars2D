@@ -230,7 +230,7 @@ public class createPlanets : MonoBehaviour {
 		startShip = ship;
 		yield return new WaitForSeconds (seconds);
 		gameCenterScript.updateCenterOfInterest(startShip);
-		startShip.collider2D.enabled = true;
+		startShip.GetComponent<Collider2D>().enabled = true;
 
 	}
 }

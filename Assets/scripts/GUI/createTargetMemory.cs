@@ -28,7 +28,7 @@ public class createTargetMemory : MonoBehaviour {
 		{
 			GameObject obj = (GameObject)Instantiate(targetingMemory);
 			obj.SetActive(false);
-			obj.transform.parent = transform;
+			obj.transform.SetParent(transform, true);
 			targetingMemoryList.Add(obj);
 		}
 	
@@ -42,12 +42,12 @@ public class createTargetMemory : MonoBehaviour {
 			{
 				if (playerActive.player1 == true)
 				{
-					targetingMemoryList[i].transform.parent = playerTargetingPanel_A.transform;
+					targetingMemoryList[i].transform.SetParent(playerTargetingPanel_A.transform, true);
 					targetingMemoryList[i].tag = "Player";
 				}
 				else
 				{
-					targetingMemoryList[i].transform.parent = playerTargetingPanel_B.transform;
+					targetingMemoryList[i].transform.SetParent(playerTargetingPanel_B.transform, true);
 					targetingMemoryList[i].tag = "Player2";
 				}
 				targetingMemoryList[i].SetActive(true);

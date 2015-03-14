@@ -30,6 +30,7 @@ public class drawLine : MonoBehaviour {
 
 	createTargetMemory targetingPanelCreateMemory;
 
+	int playerCounter = 0;
 
 
 
@@ -111,7 +112,11 @@ public class drawLine : MonoBehaviour {
 		StopCoroutine("smoothAlpha");
 		targetingPanelCanvasGroup.alpha = 0; 
 
-		targetingPanelCreateMemory.activateMemoryObject();
+		if (playerCounter < 6)
+		{
+			targetingPanelCreateMemory.activateMemoryObject();
+			playerCounter ++;
+		}
 		targetingPanelCreateMemory.fadeAlpha(mousePos);
 		
 		targetingPanel.transform.localScale = reset;

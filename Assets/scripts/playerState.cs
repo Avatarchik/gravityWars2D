@@ -76,15 +76,15 @@ public class playerState : MonoBehaviour {
 		if (player1 == true)
 		{
 			player1Stats += 1;
-			playerObject.collider2D.enabled = true;				//enable user input for opposite player
+			playerObject.GetComponent<Collider2D>().enabled = true;				//enable user input for opposite player
 			gameCenterScript.updateCenterOfInterest(shipA);
 			targetingPanel_A_CanvasGroup.alpha = 1;
 			activePlayer = "Player";
 		}
 		else if (player2 == true)
 		{
-			player1Stats += 1;
-			playerObject2.collider2D.enabled = true;			//enable user input for opposite player
+			player2Stats += 1;
+			playerObject2.GetComponent<Collider2D>().enabled = true;			//enable user input for opposite player
 			gameCenterScript.updateCenterOfInterest(shipB);
 			targetingPanel_B_CanvasGroup.alpha = 1;
 			activePlayer = "Player2";
@@ -114,8 +114,8 @@ public class playerState : MonoBehaviour {
 	{
 		gameCenterScript.resetCenterOfInterest();
 
-		playerObject.collider2D.enabled = false;
-		playerObject2.collider2D.enabled = false;
+		playerObject.GetComponent<Collider2D>().enabled = false;
+		playerObject2.GetComponent<Collider2D>().enabled = false;
 	}
 
 

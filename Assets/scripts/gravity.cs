@@ -18,7 +18,7 @@ public class gravity : MonoBehaviour {
 			float dist = Vector3.Distance(planet.transform.position, transform.position);
 			if (dist <= maxGravDist) {
 				Vector3 v = planet.transform.position - transform.position;
-				rigidbody2D.AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);
+				GetComponent<Rigidbody2D>().AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);
 			}
 		}
 	}

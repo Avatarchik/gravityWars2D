@@ -3,25 +3,18 @@ using System.Collections;
 
 public class targetMemoryLifespan : MonoBehaviour {
 	private float alpha = 1f;
-	playerState activePlayerScript;
+	public playerState activePlayerScript;
 	
-	public string activePlayer;
+	public string currentPlayer;
 
 	GameObject sceneManager;
 
-	void Start()
-	{
-		sceneManager = GameObject.FindWithTag("gameManager");
-		activePlayer = sceneManager.GetComponent<playerState>().activePlayer;
-	}
-
-
 	public void incrementIndex(Vector3 position)
 	{
+		sceneManager = GameObject.FindWithTag("gameManager");
 		activePlayerScript = sceneManager.GetComponent<playerState>();
-		activePlayer = activePlayerScript.activePlayer;
 
-		if (activePlayer == gameObject.tag)
+		if (activePlayerScript.activePlayer == gameObject.tag)
 			{
 				alpha *= .5f;
 				gameObject.GetComponent<CanvasGroup>().alpha = alpha;

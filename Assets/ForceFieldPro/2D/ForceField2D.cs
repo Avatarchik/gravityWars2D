@@ -980,7 +980,7 @@ public class ForceField2D : MonoBehaviour
     void UpdateIgnoredDictionary()
     {
         ignoredDict.Clear();
-        Rigidbody2D self = rigidbody2D;
+        Rigidbody2D self = GetComponent<Rigidbody2D>();
         if (self != null)
         {
             ignoredDict.Add(self.GetInstanceID(), self);

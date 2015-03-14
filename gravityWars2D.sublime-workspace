@@ -4,6 +4,278 @@
 		"selected_items":
 		[
 			[
+				"act",
+				"activePlayerScript"
+			],
+			[
+				"playerS",
+				"playerStateScript"
+			],
+			[
+				"target",
+				"targetingMemoryList"
+			],
+			[
+				"pa",
+				"playerTargetingPanel_B"
+			],
+			[
+				"play",
+				"playerTargetingPanel_B"
+			],
+			[
+				"playerTargetin",
+				"playerTargetingPanel_A"
+			],
+			[
+				"targeting",
+				"targeting_panel"
+			],
+			[
+				"GetC",
+				"GetComponent	type"
+			],
+			[
+				"targ",
+				"targetingPanelCreateMemory"
+			],
+			[
+				"targetingM",
+				"targetingMemoryList"
+			],
+			[
+				"targetin",
+				"targetingPanel"
+			],
+			[
+				"Set",
+				"SetActive	value"
+			],
+			[
+				"GetComp",
+				"GetComponentInChildren	type"
+			],
+			[
+				"Ve",
+				"VectorGrid"
+			],
+			[
+				"ta",
+				"targetingPanel_B_CanvasGroup"
+			],
+			[
+				"tar",
+				"targetingPanel_A_CanvasGroup"
+			],
+			[
+				"targetingPanel",
+				"targetingPanel_A_CanvasGroup"
+			],
+			[
+				"targeti",
+				"targetingPanel_B"
+			],
+			[
+				"update",
+				"updateValues"
+			],
+			[
+				"var",
+				"variableTwo"
+			],
+			[
+				"old",
+				"oldTargetingAngle"
+			],
+			[
+				"Vector",
+				"Vector3	x, y, z"
+			],
+			[
+				"north",
+				"northVector"
+			],
+			[
+				"line",
+				"lineDirection"
+			],
+			[
+				"Wai",
+				"WaitForSeconds"
+			],
+			[
+				"camer",
+				"cameraDefaultScale"
+			],
+			[
+				"Start",
+				"StartCoroutine"
+			],
+			[
+				"d",
+				"defaultCenterOfInterest"
+			],
+			[
+				"reset",
+				"resetCameraScript"
+			],
+			[
+				"ship",
+				"shipCenterWeighting"
+			],
+			[
+				"player",
+				"playerTwo"
+			],
+			[
+				"playerOn",
+				"playerOnePosition"
+			],
+			[
+				"Get",
+				"GetComponent	type"
+			],
+			[
+				"gameC",
+				"gameCenter"
+			],
+			[
+				"gameCenter",
+				"gameCenterScript"
+			],
+			[
+				"Vect",
+				"Vector3	x, y, z"
+			],
+			[
+				"game",
+				"gameObject"
+			],
+			[
+				"GetCom",
+				"GetComponentInChildren	type"
+			],
+			[
+				"Vec",
+				"Vector3	x, y, z"
+			],
+			[
+				"smooth",
+				"smoothOut"
+			],
+			[
+				"Find",
+				"Find	name"
+			],
+			[
+				"GetComponent",
+				"GetComponent	GameObject.*<T>()"
+			],
+			[
+				"ortho",
+				"orthographicSize	Camera.*"
+			],
+			[
+				"delta",
+				"deltaTime	Time.*"
+			],
+			[
+				"firstPos",
+				"firstPos-worldPos"
+			],
+			[
+				"Length",
+				"length"
+			],
+			[
+				"playerObject",
+				"playerObject2"
+			],
+			[
+				"arra",
+				"array.Add	*()"
+			],
+			[
+				"add",
+				"add	Array.*()"
+			],
+			[
+				"BoxCollid",
+				"BoxCollider2D	[class]"
+			],
+			[
+				"borderM",
+				"borderMargin"
+			],
+			[
+				"wai",
+				"waiting"
+			],
+			[
+				"Wait",
+				"WaitForSeconds	*(seconds)"
+			],
+			[
+				"Game",
+				"GameObject	*(name)"
+			],
+			[
+				"_m",
+				"_mainGUICanvasGroup"
+			],
+			[
+				"debu",
+				"debug.Log	*(message)"
+			],
+			[
+				"torpedo",
+				"torpedoDestroy"
+			],
+			[
+				"deb",
+				"debug.Log	*(message)"
+			],
+			[
+				"turn",
+				"turnSpeedSet"
+			],
+			[
+				"turnS",
+				"turnSpeed"
+			],
+			[
+				"turnSp",
+				"turnSpeedSet"
+			],
+			[
+				"HideIn",
+				"HideInInspector	[class]"
+			],
+			[
+				"player1",
+				"player1Switch"
+			],
+			[
+				"playerObj",
+				"playerObject2"
+			],
+			[
+				"SendMe",
+				"SendMessage	GameObject.*(methodName, value, options)"
+			],
+			[
+				"Send",
+				"SendMessage	methodName, value, options"
+			],
+			[
+				"boo",
+				"boolean	ProceduralPropertyType.*"
+			],
+			[
+				"GetMous",
+				"GetMouseButtonDown	Input.*(button)"
+			],
+			[
 				"tran",
 				"transform	[class]"
 			],
@@ -18,10 +290,6 @@
 			[
 				"FindWi",
 				"FindWithTag	tag"
-			],
-			[
-				"playerS",
-				"playerSwitch"
 			],
 			[
 				"scene",
@@ -42,10 +310,6 @@
 			[
 				"floa",
 				"float	PropType.*"
-			],
-			[
-				"Game",
-				"GameObject	[class]"
 			],
 			[
 				"sma",
@@ -90,10 +354,6 @@
 			[
 				"setIcon",
 				"setIconSize"
-			],
-			[
-				"add",
-				"addEllipse"
 			],
 			[
 				"main",
@@ -254,213 +514,11 @@
 			[
 				"i",
 				"i	(local, instance)"
-			],
-			[
-				"obj",
-				"objName	(local, instance)"
-			],
-			[
-				"get",
-				"getattr"
-			],
-			[
-				"curren",
-				"currentIndex"
-			],
-			[
-				"selec",
-				"selectedItems"
-			],
-			[
-				"info",
-				"infoPrint	(local, instance)"
-			],
-			[
-				"rootB",
-				"rootGrab_lineEdit"
-			],
-			[
-				"deformed",
-				"deformed_lineEdit"
-			],
-			[
-				"deformer",
-				"deformer_lineEdit"
-			],
-			[
-				"roo",
-				"rootGrab_lineEdit"
-			],
-			[
-				"root",
-				"rootGrab_pb"
-			],
-			[
-				"con",
-				"connect	Signal/Slot >> Odl Syntax"
-			],
-			[
-				"pyside",
-				"pysideuic"
-			],
-			[
-				"scale",
-				"scale_ckbx"
-			],
-			[
-				"infoFil",
-				"infoFilter(obj, currentIndex, info)	(attribute, function)"
-			],
-			[
-				"rotate",
-				"rotate_ckbx"
-			],
-			[
-				"translate",
-				"translate_ckbx"
-			],
-			[
-				"is",
-				"isChecked"
-			],
-			[
-				"transl",
-				"translate_ckbx"
-			],
-			[
-				"window",
-				"windowObject	(global, instance)"
-			],
-			[
-				"sel",
-				"selectedItems"
-			],
-			[
-				"sele",
-				"selectedItems"
-			],
-			[
-				"cl",
-				"clicked"
-			],
-			[
-				"ap",
-				"append_pb	(attribute, instance)"
-			],
-			[
-				"co",
-				"connect	Signal/Slot >> Odl Syntax"
-			],
-			[
-				"QS",
-				"QSizePolicy"
-			],
-			[
-				"label",
-				"labelLayout	(attribute, instance)"
-			],
-			[
-				"steer",
-				"steeringWheel"
-			],
-			[
-				"A",
-				"Automobile"
-			],
-			[
-				"incep",
-				"inceptionOdds"
-			],
-			[
-				"level",
-				"levelofDream"
-			],
-			[
-				"charac",
-				"characterList"
-			],
-			[
-				"ch",
-				"characterList"
-			],
-			[
-				"NS",
-				"NSAEmployee"
-			],
-			[
-				"creat",
-				"createUI"
-			],
-			[
-				"wrap",
-				"wrapInstance"
-			],
-			[
-				"re",
-				"resize"
-			],
-			[
-				"d",
-				"defs	Method"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "Assets/scripts/torpedo.cs",
-			"settings":
-			{
-				"buffer_size": 1378,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/playerControl.cs",
-			"settings":
-			{
-				"buffer_size": 215,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class gravity : MonoBehaviour {\n	\n	public float maxGravDist = 4.0f;\n	public float maxGravity = 35.0f;\n	\n	GameObject[] planets;\n\n	\n	void Start () {\n		planets = GameObject.FindGameObjectsWithTag(\"Planet\");\n	}\n	\n	void FixedUpdate () {\n		foreach(GameObject planet in planets) {\n			float dist = Vector3.Distance(planet.transform.position, transform.position);\n			if (dist <= maxGravDist) {\n				Vector3 v = planet.transform.position - transform.position;\n				rigidbody2D.AddForce(v.normalized * (1.0f - dist / maxGravDist) * maxGravity);\n			}\n		}\n	}\n}",
-			"file": "Assets/scripts/gravity.cs",
-			"file_size": 1181,
-			"file_write_time": 1405639016000000,
-			"settings":
-			{
-				"buffer_size": 598,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/createPlanets.cs",
-			"settings":
-			{
-				"buffer_size": 3809,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/enableScript.cs",
-			"settings":
-			{
-				"buffer_size": 360,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class destroyOnCollision : MonoBehaviour\n{\n	public GameObject sceneManager;\n	private playerControl playerSwitch;\n\n	private void signalTurnEnd()\n	{\n		sceneManager = GameObject.FindWithTag(\"gameManager\");\n		playerSwitch = sceneManager.GetComponent<playerControl>();\n		playerSwitch.playerSwitch();\n	}\n	\n\n	private void OnCollisionEnter2D(Collision2D collision)\n	{\n		Destroy(gameObject);\n		signalTurnEnd();\n\n\n	}\n}",
-			"file": "Assets/Scripts/destroyOnCollision.cs",
-			"file_size": 508,
-			"file_write_time": 1410512154000000,
-			"settings":
-			{
-				"buffer_size": 461,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
@@ -778,8 +836,90 @@
 	},
 	"file_history":
 	[
-		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-project",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/targetMemoryLifespan.cs",
+		"/Users/ianmankowski/Documents/GITS/gravityWars/gravityWars2D/untitled.sublime-project",
 		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-project",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/drawLine.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/createTargetMemory.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/playerState.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/targetMemoryLifespan.cs",
+		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/targetMemoryList.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/editor/createPlane.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/playerMemoryList.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/getAngle.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/gui.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/GUI/getText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/rotate.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/VectorGrid/Scripts/VectorGrid.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/VectorGrid/Scripts/VectorGridForce.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/playerState.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/destroyOnCollision.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Standard%20Assets%20(Mobile)/Scripts/SmoothFollow2D.js",
+		"/Users/ianmankowski/gravityWars2D/Assets/Standard%20Assets%20(Mobile)/Scripts/FollowTransform.js",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/drawLine.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/Camera/torpedoPosition.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/Camera/gameCenter.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/displayIfPlayer.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/test/upVector.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/createPlanets.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/gui.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/mathTools.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera/SmoothCamera2D.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/Camera/resetCamera.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/playerStats.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/SmoothCamera2D.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/Camera/SmoothCamera2D.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera/gameCenter.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera/torpedoPosition.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera/shipPosition.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera/resetCamera.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/SmoothCamera2D.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/gameCenter.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/torpedoPosition.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/Camera2DFollow.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/changeText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/torpedo.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/getText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/drawLine.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/getText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/ForceFieldPro/Demo/Script/Camera%20Scripts/SmoothLookAt.js",
+		"/Users/ianmankowski/gravityWars2D/Assets/ForceFieldPro/Demo/Script/Camera%20Scripts/SmoothFollow.js",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/mathTools.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/drawDebug.cs",
+		"/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/throwaway.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/throwaway.cs",
+		"/Users/ianmankowski/Learning/Assets/scripts/ActiveStateToggler.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/enableScript.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/changeText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/createPlanets.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/gravity.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/torpedoPosition.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/sceneReset.cs",
+		"/Users/ianmankowski/gravityWars2D/.gitignore",
+		"/Users/ianmankowski/gravityWars2D/Assets/Vectrosity/Demos/Scripts/Highlight/RotateAroundY.js",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/keyboardInput.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/clickAction.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/enableChild.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/cameraInfo.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/gameBorders.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/drawDebug.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/gui.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/playerStats.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/changeText2.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/changeText.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/ForceFieldPro/2D/ForceField2D.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/gameBorders.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/turnOff.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/untested/CanvasGroupActivator.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/rotate.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/common/NewBehaviourScript.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/torpedo.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/chargeFire.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/enableScript.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/playerControl.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/randomSize.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/gravityWars2d.sublime-project",
 		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-workspace",
@@ -789,7 +929,6 @@
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/CarClasses/carClasses",
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/PIEtemplate.py",
 		"/Users/ianmankowski/Documents/GITS/test/index.html",
-		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Git GUI Clients.sublime-settings",
 		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/ianmankowski/Library/Application Support/Sublime Text 2/Packages/User/Terminal.sublime-settings",
@@ -824,37 +963,7 @@
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week5_code/infoModule_01.py",
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/listWidgetExtra.py",
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/Blah blah",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/wrapDeform.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_3.ui",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_3.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_1.ui",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/infoWindow_3.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/testJunk01.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_1.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_infoWindow_2.ui",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week3_code/designer_selectWindow_1.ui",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/Week2/pySideWindow.py",
-		"/Users/ianmankowski/Desktop/bashy/build_and_install_PyQt4.sh",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/Week2/pySideWindow02.py",
-		"/Applications/Autodesk/maya2014/Maya.app/Contents/bin/qt.conf",
-		"/Applications/Autodesk/maya2014/Maya.app/Contents/mkspecs/qt-4.8.2-64-mkspecs/qconfig copy.pri",
-		"/Applications/Autodesk/maya2014/Maya.app/Contents/mkspecs/qt-4.8.2-64-mkspecs/qconfig.pri",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/testJunk.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/inception02.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/NSA.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/command",
-		"/Users/ianmankowski/Downloads/ObjectCreatorTutorial/object_creator_tutorial.mel",
-		"/Users/ianmankowski/Downloads/ObjectCreatorTutorial/object_creator_tutorial.ui",
-		"/Users/ianmankowski/Documents/Learning/scripts/framework.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/pySideTest.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/wrapDeform.ui",
-		"/Users/ianmankowski/Documents/Learning/scripts/testScene.meshData",
-		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter07/slider.py",
-		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter07/media/resources.qrc",
-		"/Users/ianmankowski/Documents/Learning/PRJ_PyQt4_Maya_01/project_files/Chapter06/channelBox.py",
-		"/Users/ianmankowski/Documents/QT/calcWidget02.ui",
-		"/Users/ianmankowski/Documents/QT/calcWidget02.py",
-		"/Users/ianmankowski/Google Drive/maya/2013-x64/scripts/scaleWrapDeformer.py"
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/wrapDeform.py"
 	],
 	"find":
 	{
@@ -873,6 +982,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"startShip",
+			"FixedUpdate",
+			"drawLine",
 			"how",
 			"could",
 			"terminal",
@@ -933,707 +1045,6 @@
 	"groups":
 	[
 		{
-			"selected": 4,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "Assets/scripts/torpedo.cs",
-					"settings":
-					{
-						"buffer_size": 1378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								755,
-								755
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 184.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/playerControl.cs",
-					"settings":
-					{
-						"buffer_size": 215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/scripts/gravity.cs",
-					"settings":
-					{
-						"buffer_size": 598,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/createPlanets.cs",
-					"settings":
-					{
-						"buffer_size": 3809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1727,
-								1727
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 798.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/enableScript.cs",
-					"settings":
-					{
-						"buffer_size": 360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								282,
-								282
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Assets/Scripts/destroyOnCollision.cs",
-					"settings":
-					{
-						"buffer_size": 461,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
 			"sheets":
 			[
 			]
@@ -1656,12 +1067,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -1672,7 +1077,6 @@
 		"rows":
 		[
 			0.0,
-			0.776325134569,
 			1.0
 		]
 	},
@@ -1707,6 +1111,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
@@ -1714,6 +1122,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 287.0,
+	"side_bar_width": 313.0,
 	"status_bar_visible": true
 }

@@ -2,11 +2,13 @@
 	"folders":
 	[
 		{
-			"path": "Assets/Scripts",
+			"path": "/Users/ianmankowski/gravityWars2D"
+		},
+		{
+			"path": "Assets",
 			"file_exclude_patterns":
 			[
-				"*.meta",
-				"*.dll"
+				"*.meta"
 			]
 		}
 	]

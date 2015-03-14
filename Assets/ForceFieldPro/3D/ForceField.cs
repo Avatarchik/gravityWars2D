@@ -1005,7 +1005,7 @@ public class ForceField : MonoBehaviour
     void UpdateIgnoredDictionary()
     {
         ignoredDict.Clear();
-        Rigidbody self = rigidbody;
+        Rigidbody self = GetComponent<Rigidbody>();
         if (self != null)
         {
             ignoredDict.Add(self.GetInstanceID(), self);
@@ -1046,7 +1046,7 @@ public class ForceField : MonoBehaviour
     //weak up sleeping targets
     void WeakUpTargets()
     {
-        Collider[] nearbyTargets = Physics.OverlapSphere(thisTransform.position, collider.bounds.extents.magnitude);
+        Collider[] nearbyTargets = Physics.OverlapSphere(thisTransform.position, GetComponent<Collider>().bounds.extents.magnitude);
         for (int i = 0; i < nearbyTargets.Length; i++)
         {
             Collider c = nearbyTargets[i];
