@@ -16,8 +16,11 @@ public class drawLine : MonoBehaviour {
 	Vector3 mousePos;					
 	Vector3 firstPos;
 	Vector3 worldPos;
+	Vector3 radiusLimit;
 
 	public GameObject targetingPanel;
+	GameObject confirmTarget;
+	CanvasGroup confirmTargetCanvasGroup;
 	CanvasGroup targetingPanelCanvasGroup;
 
 	public Vector3 imageScale = new Vector3(1,1,1);
@@ -46,6 +49,11 @@ public class drawLine : MonoBehaviour {
 
         targetingPanelCreateMemory = targetingPanel.GetComponent<createTargetMemory>();
 
+        confirmTarget = GameObject.Find("targetingInfoPanel");
+        confirmTargetCanvasGroup = confirmTarget.GetComponent<CanvasGroup>();
+
+
+
 
 	}
 	
@@ -57,6 +65,7 @@ public class drawLine : MonoBehaviour {
 		worldPos = firstPos;
 
 		targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+		confirmTarget.transform.position = mousePos;
 
 		StartCoroutine("smoothAlpha");
 
@@ -73,6 +82,10 @@ public class drawLine : MonoBehaviour {
 		//limit the line length
 		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
 
+		radiusLimit = Camera.main.WorldToScreenPoint(firstPos + (lineDirection.normalized * (1.175f * radius)));
+		confirmTarget.transform.position = radiusLimit;
+
+
 		mousePos = Camera.main.WorldToScreenPoint(worldPos);
 
 		lineRender.SetPosition(0, firstPos);
@@ -85,8 +98,7 @@ public class drawLine : MonoBehaviour {
 		}
 		
 		guiScript.targetingAngle = (int)angle;
-		
-		
+
 
 		distance = Vector3.Distance(firstPos, worldPos);
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
@@ -111,6 +123,7 @@ public class drawLine : MonoBehaviour {
 		//stop the coroutine and reset the values.
 		StopCoroutine("smoothAlpha");
 		targetingPanelCanvasGroup.alpha = 0; 
+		confirmTargetCanvasGroup.alpha = 0;
 
 		if (playerCounter < 6)
 		{
