@@ -133,6 +133,7 @@ public class drawLine : MonoBehaviour {
 		targetingPanelCreateMemory.fadeAlpha(mousePos);
 		
 		targetingPanel.transform.localScale = reset;
+		confirmTarget.transform.localScale = reset;
 	}
 	
 	
