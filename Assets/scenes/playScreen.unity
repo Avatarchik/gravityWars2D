@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1117221309}
   - 222: {fileID: 1117221310}
+  - 225: {fileID: 1117221311}
   m_Layer: 5
   m_Name: targetingInfoPanel
   m_TagString: Untagged
@@ -505,10 +506,10 @@ RectTransform:
   - {fileID: 599492436}
   m_Father: {fileID: 1400561145}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 286.126465, y: 288}
+  m_SizeDelta: {x: 798.126465, y: 800}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &1117221310
 CanvasRenderer:
@@ -516,6 +517,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117221308}
+--- !u!225 &1117221311
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117221308}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1119376096
 GameObject:
   m_ObjectHideFlags: 0
