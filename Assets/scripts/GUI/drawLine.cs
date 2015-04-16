@@ -82,7 +82,7 @@ public class drawLine : MonoBehaviour {
 		//limit the line length
 		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
 
-		radiusLimit = Camera.main.WorldToScreenPoint(firstPos + (lineDirection.normalized * (1.175f * radius)));
+		radiusLimit = Camera.main.WorldToScreenPoint(firstPos + (lineDirection.normalized * (1.25f * radius)));
 		confirmTarget.transform.position = radiusLimit;
 
 
@@ -105,6 +105,7 @@ public class drawLine : MonoBehaviour {
 		guiScript.testNumber = (int)normalizeDistance;
 	}
 
+	
 	void OnMouseUp()
 	{
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
@@ -135,6 +136,7 @@ public class drawLine : MonoBehaviour {
 		targetingPanel.transform.localScale = reset;
 		confirmTarget.transform.localScale = reset;
 	}
+	
 	
 	
 	IEnumerator smoothAlpha()

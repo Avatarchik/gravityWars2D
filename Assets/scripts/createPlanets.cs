@@ -9,6 +9,7 @@ public class createPlanets : MonoBehaviour {
 	//scale range for planets
 	public float planetLowBounds = 0.25f;
 	public float planetHighBounds = 3.0f;
+	//private int planetHealth;
 
 	public GameObject planetGroup;
 	public GameObject playerGroup;
@@ -25,6 +26,7 @@ public class createPlanets : MonoBehaviour {
 	Vector2 position;
 	Vector2 worldPos;
 	float randomScale;
+	int planetEnumerator;
 
 	//createShip
 	Quaternion shipRotate;
@@ -49,7 +51,7 @@ public class createPlanets : MonoBehaviour {
 
 	public float seconds = 1.5f;
 
-	private float totalMass = 0f;
+	public float totalMass = 0f;
 
 
 	/// <summary>
@@ -57,11 +59,14 @@ public class createPlanets : MonoBehaviour {
 	/// </summary>
 	/// <param name="worldPos">World position.</param>
 	/// <param name="randomScale">Random scale.</param>
-	void planetCreate(Vector2 worldPos, float randomScale)
+	void planetCreate(Vector2 worldPos, float randomScale, int planetEnumerator)
 	{
 		//instantiate a planet
 		planet = Instantiate(planet, worldPos, Quaternion.identity) as GameObject;
-		planet.name = "planet";
+		planet.name = "planet_" + planetEnumerator.ToString();
+
+		planet.GetComponent<health>().healthAmount = (int)(randomScale * 5);
+
 		
 		//Apply scale
 		planet.transform.localScale = Vector3.one * randomScale;
@@ -192,12 +197,11 @@ public class createPlanets : MonoBehaviour {
 				position = new Vector2(Random.Range(0.0f, Screen.width), Random.Range(0.0f, Screen.height));
 				placeData (position, out worldPos, out randomScale);
 			}
-			planetCreate(worldPos, randomScale);
+			planetCreate(worldPos, randomScale, i+1);
 			totalMass += mathTools.Remap(randomScale, .25f, 3f, 0, 10f);
 
 
 		}
-		//Debug.Log(totalMass);
 
 		shipPosition("left");
 		worldPos = Camera.main.ScreenToWorldPoint(position);
