@@ -122,7 +122,6 @@ public class playerState : MonoBehaviour {
 
 	public void Start()
 	{
-
 		targetingPanel_A = GameObject.Find("targetingText_A_panel");
 		targetingPanel_A_CanvasGroup = targetingPanel_A.GetComponent<CanvasGroup>();
 

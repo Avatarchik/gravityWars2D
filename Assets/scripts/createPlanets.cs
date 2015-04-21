@@ -54,6 +54,11 @@ public class createPlanets : MonoBehaviour {
 	public float totalMass = 0f;
 
 
+	/// <summary>
+	/// creates planets
+	/// </summary>
+	/// <param name="worldPos">World position.</param>
+	/// <param name="randomScale">Random scale.</param>
 	void planetCreate(Vector2 worldPos, float randomScale, int planetEnumerator)
 	{
 		//instantiate a planet
@@ -62,6 +67,7 @@ public class createPlanets : MonoBehaviour {
 
 		planet.GetComponent<health>().healthAmount = (int)(randomScale * 5);
 
+		
 		//Apply scale
 		planet.transform.localScale = Vector3.one * randomScale;
 		planet.transform.parent = planetGroup.transform;
@@ -69,7 +75,11 @@ public class createPlanets : MonoBehaviour {
 
 	}
 
-	
+	/// <summary>
+	/// outputs a position in screenspace, and a scale factor
+	/// </summary>
+	/// <param name="worldPos">World position.</param>
+	/// <param name="randomScale">Random scale.</param>
 	void placeData (Vector2 range, out Vector2 worldPos, out float randomScale)
 	{
 		worldPos = Camera.main.ScreenToWorldPoint(range);						//convert screenSpace to worldSpace
@@ -119,8 +129,6 @@ public class createPlanets : MonoBehaviour {
 		myScript = ship.GetComponentInChildren<torpedo>();
 		rotateScript = ship.GetComponentInChildren<rotate>();
 		rotateScript.enabled = engagedState;
-		ship.GetComponent<Collider2D>().enabled = engagedState;
-
 
 		//sets the rotate orientation
 		rotateScript.turnSpeed = turnSpeedSet;
