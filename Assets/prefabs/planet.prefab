@@ -13,7 +13,6 @@ GameObject:
   - 58: {fileID: 5800000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11421240}
-  - 114: {fileID: 11459676}
   m_Layer: 8
   m_Name: planet
   m_TagString: Planet
@@ -322,24 +321,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 3
---- !u!114 &11459676
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1996361e9ad4807bea4e4c7058c60f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetScale: 0
-  lowRange: 1
-  highRange: 3
-  numberOfPieces: 0
-  planet: {fileID: 100000}
-  planetGroup: {fileID: 0}
-  gameManager: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

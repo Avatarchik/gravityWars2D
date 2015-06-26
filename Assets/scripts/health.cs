@@ -3,6 +3,7 @@ using System.Collections;
 
 public class health : MonoBehaviour {
 
+	
 	public int healthAmount = 3;
 	createPlanets2 createChildren;
 
@@ -11,7 +12,7 @@ public class health : MonoBehaviour {
 		healthAmount -= 1;
 		if (healthAmount == 0)
 		{
-			createChildren.planetCreate();
+			createChildren.planetCreate(transform.position, transform.localScale.x, 3);
 			Destroy(gameObject);
 
 		}
@@ -29,6 +30,7 @@ public class health : MonoBehaviour {
 		}
 		createChildren = gameObject.GetComponent<createPlanets2>();
 	}
+	
 }
 
 

@@ -53,33 +53,9 @@ public class createPlanets : MonoBehaviour {
 
 	public float totalMass = 0f;
 
+	createPlanets2 planetCreateScript;
 
-	/// <summary>
-	/// creates planets
-	/// </summary>
-	/// <param name="worldPos">World position.</param>
-	/// <param name="randomScale">Random scale.</param>
-	void planetCreate(Vector2 worldPos, float randomScale, int planetEnumerator)
-	{
-		//instantiate a planet
-		planet = Instantiate(planet, worldPos, Quaternion.identity) as GameObject;
-		planet.name = "planet_" + planetEnumerator.ToString();
 
-		planet.GetComponent<health>().healthAmount = (int)(randomScale * 5);
-
-		
-		//Apply scale
-		planet.transform.localScale = Vector3.one * randomScale;
-		planet.transform.parent = planetGroup.transform;
-		planetGroup.transform.parent = gameManager.transform;
-
-	}
-
-	/// <summary>
-	/// outputs a position in screenspace, and a scale factor
-	/// </summary>
-	/// <param name="worldPos">World position.</param>
-	/// <param name="randomScale">Random scale.</param>
 	void placeData (Vector2 range, out Vector2 worldPos, out float randomScale)
 	{
 		worldPos = Camera.main.ScreenToWorldPoint(range);						//convert screenSpace to worldSpace
@@ -87,11 +63,6 @@ public class createPlanets : MonoBehaviour {
 	}
 
 
-	/// <summary>
-	/// Creates the ship.
-	/// </summary>
-	/// <param name="worldPos">World position.</param>
-	/// <param name="playerOrder">sets the player number.</param>
 	void createShip (Vector2 worldPos,   
 					int playerOrder)
 	{
@@ -178,12 +149,13 @@ public class createPlanets : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		planetGroup = new GameObject("planetGroup");
 		playerGroup = new GameObject("playerGroup");
 		gameManager = GameObject.FindWithTag("gameManager");
 
 		actionCenter = GameObject.Find("actionCenter");
 		gameCenterScript = actionCenter.GetComponent<gameCenter>();
+
+		planetCreateScript = gameObject.GetComponent<createPlanets2>();
 
 
 		for(int i = 0; i < numberOfPlanets; i++)
@@ -197,7 +169,8 @@ public class createPlanets : MonoBehaviour {
 				position = new Vector2(Random.Range(0.0f, Screen.width), Random.Range(0.0f, Screen.height));
 				placeData (position, out worldPos, out randomScale);
 			}
-			planetCreate(worldPos, randomScale, i+1);
+			
+			planetCreateScript.planetCreate(worldPos, randomScale, i+1);
 			totalMass += mathTools.Remap(randomScale, .25f, 3f, 0, 10f);
 
 

@@ -1,15 +1,8 @@
 {
-	"folders":
-	[
-		{
-			"path": "/Users/ianmankowski/gravityWars2D"
-		},
-		{
-			"path": "Assets",
-			"file_exclude_patterns":
-			[
-				"*.meta"
-			]
-		}
-	]
+    "folders": [{
+        "path": ".",
+        "folder_exclude_patterns": [".svn", "._d", ".metadata", ".settings"],
+        "file_exclude_patterns": ["*.pyc", "*.pyo", ".project", "*.meta", "*.log", "*.asset",
+        "*.unityproj", "*.csproj", "*.sln", "*.dwlt"]
+    }]
 }
