@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class debris : MonoBehaviour {
@@ -11,5 +11,10 @@ public class debris : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void regenerate()
+	{
+		Destroy(gameObject);
 	}
 }

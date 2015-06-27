@@ -23,6 +23,7 @@ public class createPlanets2 : MonoBehaviour {
 		planet.name = "planet_" + planetEnumerator.ToString();
 
 		planet.GetComponent<health>().healthAmount = (int)(randomScale * 5);
+		planet.GetComponent<planetMeta>().Iterator = planetEnumerator;
 
 		//Apply scale
 		
