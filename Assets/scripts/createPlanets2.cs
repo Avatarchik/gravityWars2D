@@ -19,7 +19,6 @@ public class createPlanets2 : MonoBehaviour {
 	{
 		//instantiate a planet
 		planet = Instantiate(planet, worldPos, Quaternion.identity) as GameObject;
-		//planet.name = "planet_";
 		planet.name = "planet_" + planetEnumerator.ToString();
 
 		planet.GetComponent<health>().healthAmount = (int)(randomScale * 5);
@@ -30,7 +29,6 @@ public class createPlanets2 : MonoBehaviour {
 		planet.transform.localScale = Vector3.one * randomScale;
 		planet.transform.parent = planetGroup.transform;
 		planetGroup.transform.parent = gameManager.transform;
-	
 	}
 		
 	void Awake () {
@@ -39,17 +37,6 @@ public class createPlanets2 : MonoBehaviour {
 		gameManager = GameObject.FindWithTag("gameManager");
 	}
 
-	// Use this for initialization
-	/*
-	void Start () {
-		numberOfPieces = Random.Range(lowRange, highRange);	
-		worldPos = transform.position;
-		planetScale = transform.localScale.x/(numberOfPieces+1);
-
-		gameManager = GameObject.FindWithTag("gameManager");
-		planetGroup = GameObject.Find("planetGroup");
-	}
-	*/
 }
 
 

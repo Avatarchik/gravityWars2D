@@ -9,7 +9,12 @@ public class health : MonoBehaviour {
 	GameObject gameManager;
 	int planetEnumerator;
 	float randomScale;
+	float randFloatX;
+	float randFloatY;
+
+	Vector3 randomPositionVector;
 	int numberOfPlanets;
+
 
 	public void damage()
 	{
@@ -34,20 +39,24 @@ public class health : MonoBehaviour {
 		{
 			healthAmount = -1;
 		}
+		
 		createChildren = gameManager.GetComponent<createPlanets2>();
-
 	}
 
 	void createChildPlanets()
 	{
-		numberOfPlanets = Random.Range(0,4);
+		numberOfPlanets = Random.Range(1,4);
 
 		for(int i = 0; i < numberOfPlanets; i++)
 		{
-			randomScale = Random.Range(.5f, transform.localScale.x/3);			
+			randomScale = Random.Range(.5f, transform.localScale.x/3);	
 
-			createChildren.planetCreate(transform.position, randomScale, 
-				gameObject.GetComponent<planetMeta>().Iterator+10+i);
+			randFloatX = Random.Range(.5f, transform.localScale.x/2);
+			randFloatY = Random.Range(.5f, transform.localScale.x/2);	
+			randomPositionVector = new Vector3(randFloatX, randFloatY, 0);	
+
+			createChildren.planetCreate(transform.position + randomPositionVector, randomScale, 
+			gameObject.GetComponent<planetMeta>().Iterator+10+i);
 		}
 	}
 	
