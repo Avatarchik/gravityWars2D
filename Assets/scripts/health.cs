@@ -22,7 +22,7 @@ public class health : MonoBehaviour {
 		if (healthAmount == 0)
 		{
 			Destroy(gameObject);
-			createChildPlanets();			
+			createChildPlanets();		
 		}
 		else if (healthAmount <= -1)
 		{

@@ -4,26 +4,36 @@ using System.Collections;
 public class initializePlanet : MonoBehaviour {
 
 	public float dynamicsOffDelay;
+	public float fieldStrength;
+
 	Rigidbody2D physicsSwitch;
 	public ForceField2D field;	
-	public float fieldStrength;
+
+	planetMeta planetInfo;
+	public float generalMultiplierMemory;
 
 	// Use this for initialization
 	void Start () {
 		physicsSwitch = GetComponent<Rigidbody2D>();
+		planetInfo = GetComponent<planetMeta>();
 		field = GetComponent<ForceField2D>();
 
-		physicsSwitch.isKinematic = false;
-		field.generalMultiplier = fieldStrength;
+		//only turn on repulsion field if the planet is not a parent
+		
+		if (planetInfo.Iterator >= 9){	
+			generalMultiplierMemory = field.generalMultiplier;	//grab the value that's there
 
-		StartCoroutine(delayPhysics(dynamicsOffDelay));
-	
+			physicsSwitch.isKinematic = false;
+			field.generalMultiplier = fieldStrength;
+
+			StartCoroutine(delayPhysics(dynamicsOffDelay));
+		}
 	}
 	
 
 	IEnumerator delayPhysics(float seconds) {
 		yield return new WaitForSeconds (seconds);		
 		physicsSwitch.isKinematic = true;
-		field.generalMultiplier = 1;
+		field.generalMultiplier = generalMultiplierMemory;
 	}
 }
