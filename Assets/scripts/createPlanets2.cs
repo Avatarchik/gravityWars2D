@@ -28,9 +28,7 @@ public class createPlanets2 : MonoBehaviour {
 		
 		planet.transform.localScale = Vector3.one * randomScale;
 		planet.transform.parent = planetGroup.transform;
-		planetGroup.transform.parent = gameManager.transform;
-
-		
+		planetGroup.transform.parent = gameManager.transform;	
 	}
 		
 	void Awake () {

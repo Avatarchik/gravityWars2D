@@ -106,7 +106,7 @@ public class drawLine : MonoBehaviour {
 	}
 
 	
-	void OnMouseUp()
+	public void FireTorpedo()
 	{
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
 		guiScript.lastPower = (int)normalizeDistance;			//send the power of the torpedo to the guiScript
@@ -136,6 +136,7 @@ public class drawLine : MonoBehaviour {
 		targetingPanel.transform.localScale = reset;
 		confirmTarget.transform.localScale = reset;
 	}
+	
 	
 	
 	
