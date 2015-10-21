@@ -142,12 +142,12 @@ public class drawLine : MonoBehaviour {
 	
 	IEnumerator smoothAlpha()
 	{
-		while(targetingPanelCanvasGroup.alpha < 1)
+		while(targetingPanelCanvasGroup.alpha < .75f)
 		{
-			targetingPanelCanvasGroup.alpha = Mathf.Lerp(targetingPanelCanvasGroup.alpha, 1, smoothing * Time.deltaTime);
+			targetingPanelCanvasGroup.alpha = Mathf.Lerp(targetingPanelCanvasGroup.alpha, .75f, smoothing * Time.deltaTime);
 			targetingPanel.transform.localScale = Vector3.Lerp(targetingPanel.transform.localScale, imageScale, smoothing * Time.deltaTime);
 
-			confirmTargetCanvasGroup.alpha = Mathf.Lerp(confirmTargetCanvasGroup.alpha, 1, smoothing * Time.deltaTime);
+			confirmTargetCanvasGroup.alpha = Mathf.Lerp(confirmTargetCanvasGroup.alpha, .75f, smoothing * Time.deltaTime);
 			confirmTarget.transform.localScale = Vector3.Lerp(confirmTarget.transform.localScale, imageScale, smoothing/2 * Time.deltaTime);
 
 			yield return null;
