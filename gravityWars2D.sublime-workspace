@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"draw",
+				"drawLine"
+			],
+			[
+				"Fin",
+				"FindWithTag	tag"
+			],
+			[
+				"drawL",
+				"drawLineScript"
+			],
+			[
 				"parent",
 				"parentFlag"
 			],
@@ -502,52 +514,16 @@
 			[
 				"attr",
 				"attributeChange"
-			],
-			[
-				"visibi",
-				"visibility_cb"
-			],
-			[
-				"top",
-				"topLayout	(attribute, instance)"
-			],
-			[
-				"scroll",
-				"scrollParentLayout"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/initializePlanet.cs",
+			"file": "Assets/scripts/GUI/Execute.cs",
 			"settings":
 			{
-				"buffer_size": 972,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/scripts/createPlanets2.cs",
-			"settings":
-			{
-				"buffer_size": 1064,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/scripts/planetMeta.cs",
-			"settings":
-			{
-				"buffer_size": 118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/scripts/health.cs",
-			"settings":
-			{
-				"buffer_size": 1233,
+				"buffer_size": 522,
 				"line_ending": "Unix"
 			}
 		}
@@ -879,24 +855,32 @@
 	[
 		"/Users/ianmankowski/gravityWars2D",
 		"/Users/ianmankowski/gravityWars2D/Assets",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts"
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI"
 	],
 	"file_history":
 	[
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/drawLine.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/createPlanets.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/enableScript.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/playerState.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/Execute.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GameState.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/health.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/planetMeta.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/createPlanets2.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/initializePlanet.cs",
+		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GameManager.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/destroyOnCollision.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/ForceFieldPro/2D/ForceField2D.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/torpedo.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/rotate.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/debris.cs",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts/planetMeta.cs",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts/createPlanets.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/planetCollision.cs",
 		"/Users/ianmankowski/sandbox/Assets/Editor/NewBehaviourScript.cs",
 		"/Users/ianmankowski/Google Drive/maya/2016/Maya.env",
 		"/Users/ianmankowski/sandbox/Assets/NewBehaviourScript.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/changeText.cs",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts/playerState.cs",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/drawLine.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/targetMemoryLifespan.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/GUI/createTargetMemory.cs",
 		"/Users/ianmankowski/gravityWars2D/gravityWars2D.sublime-project",
@@ -953,7 +937,6 @@
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/throwaway.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/throwaway.cs",
 		"/Users/ianmankowski/Learning/Assets/scripts/ActiveStateToggler.cs",
-		"/Users/ianmankowski/gravityWars2D/Assets/scripts/enableScript.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/Scripts/changeText.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/gravity.cs",
 		"/Users/ianmankowski/gravityWars2D/Assets/scripts/torpedoPosition.cs",
@@ -1004,13 +987,7 @@
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/MayaNodeInterface-master/ui/gui_from_designer.py",
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/guiLaunce_02.py",
 		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/guiLaunce.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/processArea.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/basicSubprocess.pyw",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignmentIan/listWidgetExtra_05.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week4_code/listWidgetExtra_02.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignmentIan/fileReader_4.pyw",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/tabWidget/tabWindow.py",
-		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/Generic/week6_code/assignment/assignment_infoWindow.py"
+		"/Users/ianmankowski/Google Drive/maya/2014-x64/scripts/processArea.py"
 	],
 	"find":
 	{
@@ -1093,53 +1070,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/initializePlanet.cs",
+					"file": "Assets/scripts/GUI/Execute.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 972,
+						"buffer_size": 522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								711,
-								724
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/scripts/createPlanets2.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1064,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								928,
-								928
+								522,
+								522
 							]
 						],
 						"settings":
@@ -1152,63 +1100,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/scripts/planetMeta.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 118,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/scripts/health.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1233,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								335
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
