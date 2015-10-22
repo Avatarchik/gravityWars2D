@@ -11,7 +11,7 @@ public class changeText : MonoBehaviour {
 
  	public void messageState(string tag)
  	{
- 		if (tag == "Player")
+ 		if (tag == "Player1")
  		{
  			playerState.instance.DisablePlayers();		//Singleton!!!
 			canvasText.text = "Player 2 wins";

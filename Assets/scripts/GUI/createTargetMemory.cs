@@ -43,7 +43,7 @@ public class createTargetMemory : MonoBehaviour {
 				if (playerActive.player1 == true)
 				{
 					targetingMemoryList[i].transform.SetParent(playerTargetingPanel_A.transform, true);
-					targetingMemoryList[i].tag = "Player";
+					targetingMemoryList[i].tag = "Player1";
 				}
 				else
 				{

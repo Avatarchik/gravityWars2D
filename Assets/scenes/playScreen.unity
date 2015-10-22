@@ -230,7 +230,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .0740392208, g: .106248364, b: .156862751, a: .141000003}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1002,6 +1002,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1452037131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1452037132}
+  m_Layer: 0
+  m_Name: torpedoTrailsGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1452037132
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452037131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1859833059}
+  m_RootOrder: 2
 --- !u!1 &1585325796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1246,6 @@ GameObject:
   - 114: {fileID: 1859833060}
   - 114: {fileID: 1859833062}
   - 114: {fileID: 1859833063}
-  - 114: {fileID: 1859833061}
   - 114: {fileID: 1859833064}
   - 114: {fileID: 1859833065}
   m_Layer: 0
@@ -1243,13 +1269,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: 1
   player2: 0
-  activePlayer: Player
+  activePlayer: Player1
   player1Stats: 0
   player2Stats: 0
   playerObject: {fileID: 0}
   playerObject2: {fileID: 0}
   player1Switch: {fileID: 0}
   player2Switch: {fileID: 0}
+  player1Color: {r: 1, g: 0, b: 0, a: 1}
+  player2Color: {r: 0, g: .532000065, b: 1, a: 1}
 --- !u!114 &1859833058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,6 +1314,7 @@ Transform:
   m_Children:
   - {fileID: 154347646}
   - {fileID: 160130871}
+  - {fileID: 1452037132}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1859833060
@@ -1301,19 +1330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   border: {fileID: 100000, guid: 6cc277a53af654e83aaf6724b04f2e74, type: 2}
---- !u!114 &1859833061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400014, guid: 62c38ea581aa1499292d2f493005df7a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859833056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c51193a757f4d38a26a43542e112d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  childObject: {fileID: 0}
 --- !u!114 &1859833062
 MonoBehaviour:
   m_ObjectHideFlags: 0

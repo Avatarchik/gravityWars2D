@@ -9,7 +9,7 @@ public class disableShipFields : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		shipA = GameObject.FindWithTag("Player");
+		shipA = GameObject.FindWithTag("Player1");
 		shipB = GameObject.FindWithTag("Player2");
 
 		Invoke ("DisableFields", .2f);

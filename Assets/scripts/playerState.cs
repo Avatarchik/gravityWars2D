@@ -16,7 +16,7 @@ public class playerState : MonoBehaviour {
 	public bool player1 = true;
 	public bool player2 = false;
 
-	public string activePlayer = "Player";
+	public string activePlayer = "Player1";
 
 	public int player1Stats = 0;
 	public int player2Stats = 0;
@@ -40,6 +40,10 @@ public class playerState : MonoBehaviour {
 	GameObject targetingPanel_B;
 	CanvasGroup targetingPanel_B_CanvasGroup;
 
+	public Color player1Color;
+	public Color player2Color;
+
+
 	//This bit here turns this into a singleton
 	private static playerState _instance;
 
@@ -57,7 +61,7 @@ public class playerState : MonoBehaviour {
 
 	public void playerSwitch()
 	{
-		shipA = GameObject.FindWithTag("Player");
+		shipA = GameObject.FindWithTag("Player1");
 		shipB = GameObject.FindWithTag("Player2");
 		
 		//need to activate the torpedo gravity fields again.
@@ -79,7 +83,7 @@ public class playerState : MonoBehaviour {
 			playerObject.GetComponent<Collider2D>().enabled = true;				//enable user input for opposite player
 			gameCenterScript.updateCenterOfInterest(shipA);
 			targetingPanel_A_CanvasGroup.alpha = 1;
-			activePlayer = "Player";
+			activePlayer = "Player1";
 		}
 		else if (player2 == true)
 		{
