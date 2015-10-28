@@ -11,7 +11,6 @@ public class changeText : MonoBehaviour {
 
  	public void messageState(string tag)
  	{
- 		Debug.Log("hitting");
  		if (tag == "Player1")
  		{
  			playerState.instance.DisablePlayers();		//Singleton!!!

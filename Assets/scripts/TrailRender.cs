@@ -12,12 +12,20 @@ public class TrailRender : MonoBehaviour {
 	public Color lineColor;
 	public float lineWidth = 12.0f;
 	public float textureScale = 1f;
+	public bool fetchColor = false;
 
 	int maxPoints = 500000;
 	bool continuousUpdate = true;
 
 	private VectorLine pathLine;
 	private int pathIndex = 0;
+	
+
+	//FetchColor
+	GameObject gameManager;
+
+	private playerState playerStateScript;
+	private string activePlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +36,23 @@ public class TrailRender : MonoBehaviour {
 									LineType.Continuous);
 		pathLine.color = lineColor;
 		pathLine.textureScale = 1f;
+		if (fetchColor == true){
+			FetchColor();
+		}
 		StartCoroutine(SamplePoints ());
+	}
+
+	void FetchColor () {
+        gameManager = GameObject.FindWithTag("gameManager");
+        playerStateScript = gameManager.GetComponent<playerState>();
+
+        activePlayer = playerStateScript.activePlayer;
+
+        if (activePlayer == "Player1"){
+        	pathLine.color = playerStateScript.player1Color;
+        }else{
+        	pathLine.color = playerStateScript.player2Color;
+        }
 	}
 	
 	IEnumerator SamplePoints (){
