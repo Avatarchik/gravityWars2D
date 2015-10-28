@@ -23,7 +23,7 @@ public class GetPlayerColor : MonoBehaviour {
         }else{
         	playerColor = playerStateScript.player2Color;
         }
-        GetComponent<TrailRenderer>().material.SetColor("_TintColor", playerColor);
+        //GetComponent<TrailRenderer>().material.SetColor("_TintColor", playerColor);
 	}
 }
 	

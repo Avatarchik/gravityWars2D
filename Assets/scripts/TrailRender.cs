@@ -10,7 +10,10 @@ public class TrailRender : MonoBehaviour {
 
 	public Texture lineTex;
 	public Color lineColor;
-	int maxPoints = 500;
+	public float lineWidth = 12.0f;
+	public float textureScale = 1f;
+
+	int maxPoints = 500000;
 	bool continuousUpdate = true;
 
 	private VectorLine pathLine;
@@ -21,7 +24,7 @@ public class TrailRender : MonoBehaviour {
 		pathLine = new VectorLine("Path", 
 									new List<Vector3>(), 
 									lineTex, 
-									6.0f, 
+									lineWidth, 
 									LineType.Continuous);
 		pathLine.color = lineColor;
 		pathLine.textureScale = 1f;
@@ -40,6 +43,8 @@ public class TrailRender : MonoBehaviour {
 
 			if (continuousUpdate){
 				pathLine.Draw3D();
+				pathLine.rectTransform.SetParent(GameObject.Find("TorpedoTrailsPanel").transform);
+
 			}
 		}
 	}

@@ -15,10 +15,8 @@ public class destroyOnCollision : MonoBehaviour
 		collision.gameObject.GetComponent<health>().damage();
 		
 		playerState.instance.playerSwitch();		//Singleton!!!
-
-		objectHit = collision.gameObject.tag;
 		
-		changeText.messageState(objectHit);
+		changeText.messageState(collision.gameObject.tag);
 
 	}
 
