@@ -24,6 +24,7 @@ public class destroyOnCollision : MonoBehaviour
 	{
 		canvas = GameObject.FindObjectOfType<Canvas>();
 		changeText = canvas.GetComponentInChildren<changeText>();
+
 	}
 
 }

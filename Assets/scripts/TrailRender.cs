@@ -19,6 +19,10 @@ public class TrailRender : MonoBehaviour {
 
 	private VectorLine pathLine;
 	private int pathIndex = 0;
+	private GameObject torpedoTrailsPanel;
+	private bool initiator = true;
+	private FadeChildTrails fadeChildTrails;
+	private int numberofTrails = 1;
 	
 
 	//FetchColor
@@ -29,7 +33,12 @@ public class TrailRender : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		pathLine = new VectorLine("Path", 
+		torpedoTrailsPanel = GameObject.Find("TorpedoTrailsPanel");
+		fadeChildTrails = torpedoTrailsPanel.GetComponent<FadeChildTrails>();
+
+		numberofTrails = torpedoTrailsPanel.transform.childCount;
+
+		pathLine = new VectorLine("Path_" + numberofTrails, 
 									new List<Vector3>(), 
 									lineTex, 
 									lineWidth, 
@@ -39,6 +48,7 @@ public class TrailRender : MonoBehaviour {
 		if (fetchColor == true){
 			FetchColor();
 		}
+
 		StartCoroutine(SamplePoints ());
 	}
 
@@ -49,11 +59,14 @@ public class TrailRender : MonoBehaviour {
         activePlayer = playerStateScript.activePlayer;
 
         if (activePlayer == "Player1"){
-        	pathLine.color = playerStateScript.player1Color;
+        	lineColor = playerStateScript.player1Color;
         }else{
-        	pathLine.color = playerStateScript.player2Color;
+        	lineColor = playerStateScript.player2Color;
         }
+        pathLine.color = lineColor;
 	}
+	
+	
 	
 	IEnumerator SamplePoints (){
 		//Gets the position of the 3D object  at intervals(20 times a second)
@@ -67,9 +80,14 @@ public class TrailRender : MonoBehaviour {
 
 			if (continuousUpdate){
 				pathLine.Draw3D();
-				pathLine.rectTransform.SetParent(GameObject.Find("TorpedoTrailsPanel").transform);
-
 			}
+			if (initiator == true){
+				initiator = false;
+
+				pathLine.rectTransform.SetParent(torpedoTrailsPanel.transform);
+				pathLine.rectTransform.gameObject.AddComponent<CanvasGroup>();
+				fadeChildTrails.Fade();
+			}	
 		}
 	}
 }

@@ -10,6 +10,7 @@ TagManager:
   - border
   - targetMemory
   - Player1
+  - torpedoTrails
   layers:
   - Default
   - TransparentFX
