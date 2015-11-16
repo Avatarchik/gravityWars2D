@@ -30,7 +30,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401654}
-  - 114: {fileID: 11450838}
+  - 114: {fileID: 11439492}
   m_Layer: 0
   m_Name: torpedoTrail_Parent
   m_TagString: Untagged
@@ -161,7 +161,7 @@ MonoBehaviour:
   cameraDefaultScale: 6.25
   smoothOut: 1
   smoothIn: .25
---- !u!114 &11450838
+--- !u!114 &11439492
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,14 +169,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 148106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64dff36e0baf74d1aa99443d78b9c1e7, type: 3}
+  m_Script: {fileID: 11500000, guid: d19830c34af674cec9902449578edcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineTex: {fileID: 2800000, guid: bcf7f3696750a4d6e82a72255d15e3cb, type: 3}
-  lineColor: {r: 1, g: 1, b: 1, a: 1}
-  lineWidth: 1
-  textureScale: .25
-  fetchColor: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

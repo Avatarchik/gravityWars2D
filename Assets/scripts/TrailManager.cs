@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 using Vectrosity;
 
-public class TrailRender : MonoBehaviour {
-
+public class TrailManager : MonoBehaviour {
 	public Texture lineTex;
 	public Color lineColor;
 	public float lineWidth = 12.0f;
@@ -19,10 +19,11 @@ public class TrailRender : MonoBehaviour {
 
 	private VectorLine pathLine;
 	private int pathIndex = 0;
-	private GameObject torpedoTrailsPanel;
 	private bool initiator = true;
 	private FadeChildTrails fadeChildTrails;
 	private int numberofTrails = 1;
+
+	public GameObject currentTorpedo;
 
 	//FetchColor
 	GameObject gameManager;
@@ -30,40 +31,47 @@ public class TrailRender : MonoBehaviour {
 	private playerState playerStateScript;
 	private string activePlayer;
 
+	//FadeChildTrails
+	public Component[] canvasGroupNodes;
+ 
+    public List<VectorLine> trailRenderList = new List<VectorLine>();
+
+
 	// Use this for initialization
-	void Start () {
-
-		torpedoTrailsPanel = GameObject.Find("TorpedoTrailsPanel");
-		fadeChildTrails = torpedoTrailsPanel.GetComponent<FadeChildTrails>();
-
-		numberofTrails = torpedoTrailsPanel.transform.childCount;
-
-		pathLine = new VectorLine("Path_" + numberofTrails, 
+	public void drawTrail (GameObject torpedo) {
+		currentTorpedo = torpedo;
+		numberofTrails = trailRenderList.Count;
+		currentTorpedo = torpedo;
+		
+		pathLine = new VectorLine("Path_" + numberofTrails +1, 
 									new List<Vector3>(), 
 									lineTex, 
 									lineWidth, 
 									LineType.Continuous);
 		pathLine.color = lineColor;
 		pathLine.textureScale = 1f;
+
 		if (fetchColor == true){
 			FetchColor();
 		}
+		trailRenderList.Add(pathLine);
 
-		StartCoroutine(SamplePoints ());
+		StartCoroutine(SamplePoints (torpedo));
 	}
 
-	    //This is our custom class with our variables
-    [System.Serializable]
-    public class TrailRenderList{
-        //public GameObject AnGO;
-        //public int AnInt;
-        //public float AnFloat;
-        //public Vector3 AnVector3;
-        //public int[] AnIntArray = new int[0];
-    }
- 
-    //This is our list we want to use to represent our class as an array.
-    public List<TrailRenderList> trailRenderList = new List<TrailRenderList>(1);
+	public void Fade(){
+		canvasGroupNodes = GetComponentsInChildren<CanvasGroup>();
+
+		foreach (CanvasGroup node in canvasGroupNodes){
+			if (node.name == "TorpedoTrailsPanel"){
+				}else{
+					node.alpha -= .1f;
+					if (node.alpha <= 0){
+					Destroy(node.gameObject);
+				}
+			}
+		} 
+	}
 
 	void FetchColor () {
         gameManager = GameObject.FindWithTag("gameManager");
@@ -79,29 +87,32 @@ public class TrailRender : MonoBehaviour {
         pathLine.color = lineColor;
 	}
 	
-	
-	
-	IEnumerator SamplePoints (){
+	IEnumerator SamplePoints (GameObject torpedo){
 		//Gets the position of the 3D object  at intervals(20 times a second)
 		bool running = true;
 		while (running){
-			pathLine.points3.Add (transform.position);
-			if (++pathIndex == maxPoints) {
+			if (torpedo.activeInHierarchy == true){
+				if(++pathIndex >= maxPoints){
+					running = false;
+				}else{
+					pathLine.points3.Add (torpedo.transform.position);
+					pathLine.rectTransform.SetParent(gameObject.transform);
+
+					yield return new WaitForSeconds(.025f);
+
+					if (continuousUpdate){
+						pathLine.Draw3D();
+					}
+					if (initiator == true){
+						initiator = false;
+					}
+				}
+
+					//fadeChildTrails.Fade();
+			}else{
 				running = false;
 			}
-			yield return new WaitForSeconds(.025f);
-
-			if (continuousUpdate){
-				pathLine.Draw3D();
-			}
-			if (initiator == true){
-				initiator = false;
-
-				pathLine.rectTransform.SetParent(torpedoTrailsPanel.transform);
-				pathLine.rectTransform.gameObject.AddComponent<CanvasGroup>();
-				fadeChildTrails.Fade();
-			}	
 		}
+		Destroy(torpedo.transform.parent.gameObject);
 	}
 }
-
