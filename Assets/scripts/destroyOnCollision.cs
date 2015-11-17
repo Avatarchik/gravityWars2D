@@ -10,22 +10,20 @@ public class destroyOnCollision : MonoBehaviour
 	//When the torpedo collides, detect what it has collided with, then send that info to the canvas.
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		Destroy(gameObject);
+		gameObject.SetActive(false);
 
 		collision.gameObject.GetComponent<health>().damage();
 		
 		playerState.instance.playerSwitch();		//Singleton!!!
-
-		objectHit = collision.gameObject.tag;
 		
-		changeText.messageState(objectHit);
-
+		changeText.messageState(collision.gameObject.tag);
 	}
 
 	void Start()
 	{
 		canvas = GameObject.FindObjectOfType<Canvas>();
 		changeText = canvas.GetComponentInChildren<changeText>();
+
 	}
 
 }
