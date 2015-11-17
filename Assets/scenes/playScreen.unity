@@ -672,13 +672,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8f0862a4db845fd9c74ff4cec47d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineTex: {fileID: 2800000, guid: bcf7f3696750a4d6e82a72255d15e3cb, type: 3}
+  lineTex: {fileID: 2800000, guid: 30053462368c94dfebc1b0d97a14f590, type: 3}
+  lineMaterial: {fileID: 2100000, guid: 13d254a9a660f43e0816e75b1ec1b3ec, type: 2}
   lineColor: {r: 1, g: 1, b: 1, a: 0}
   lineWidth: 1
   textureScale: 1
   fetchColor: 1
   currentTorpedo: {fileID: 0}
-  canvasGroupNodes: []
+  fadeAlphaFactor: .0500000007
   trailRenderList: []
 --- !u!1 &820784005
 GameObject:

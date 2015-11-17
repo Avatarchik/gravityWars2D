@@ -8,7 +8,9 @@ using System.Linq;
 using Vectrosity;
 
 public class TrailManager : MonoBehaviour {
+
 	public Texture lineTex;
+	public Material lineMaterial;
 	public Color lineColor;
 	public float lineWidth = 12.0f;
 	public float textureScale = 1f;
@@ -19,7 +21,6 @@ public class TrailManager : MonoBehaviour {
 
 	private VectorLine pathLine;
 	private int pathIndex = 0;
-	private bool initiator = true;
 	private FadeChildTrails fadeChildTrails;
 	private int numberofTrails = 1;
 
@@ -32,7 +33,9 @@ public class TrailManager : MonoBehaviour {
 	private string activePlayer;
 
 	//FadeChildTrails
-	public Component[] canvasGroupNodes;
+	private VectorLine tempLine;
+	private Color fadeAlpha;
+	public float fadeAlphaFactor = .1f;
  
     public List<VectorLine> trailRenderList = new List<VectorLine>();
 
@@ -49,6 +52,7 @@ public class TrailManager : MonoBehaviour {
 									lineWidth, 
 									LineType.Continuous);
 		pathLine.color = lineColor;
+		pathLine.material = lineMaterial;
 		pathLine.textureScale = 1f;
 
 		if (fetchColor == true){
@@ -57,20 +61,6 @@ public class TrailManager : MonoBehaviour {
 		trailRenderList.Add(pathLine);
 
 		StartCoroutine(SamplePoints (torpedo));
-	}
-
-	public void Fade(){
-		canvasGroupNodes = GetComponentsInChildren<CanvasGroup>();
-
-		foreach (CanvasGroup node in canvasGroupNodes){
-			if (node.name == "TorpedoTrailsPanel"){
-				}else{
-					node.alpha -= .1f;
-					if (node.alpha <= 0){
-					Destroy(node.gameObject);
-				}
-			}
-		} 
 	}
 
 	void FetchColor () {
@@ -86,6 +76,25 @@ public class TrailManager : MonoBehaviour {
         }
         pathLine.color = lineColor;
 	}
+
+
+	public void Fade(){
+		for(int i = 0; i < trailRenderList.Count; i++){
+			fadeAlpha = trailRenderList[i].color;
+			fadeAlpha.a -= fadeAlphaFactor;
+			trailRenderList[i].color = fadeAlpha;
+			if(fadeAlpha.a <= 0f){
+				trailRenderList.RemoveAt(i);
+				tempLine = trailRenderList[i];
+				VectorLine.Destroy(ref tempLine);
+			}
+		}
+
+	}
+
+
+	
+
 	
 	IEnumerator SamplePoints (GameObject torpedo){
 		//Gets the position of the 3D object  at intervals(20 times a second)
@@ -103,16 +112,12 @@ public class TrailManager : MonoBehaviour {
 					if (continuousUpdate){
 						pathLine.Draw3D();
 					}
-					if (initiator == true){
-						initiator = false;
-					}
 				}
-
-					//fadeChildTrails.Fade();
 			}else{
 				running = false;
 			}
 		}
 		Destroy(torpedo.transform.parent.gameObject);
+		Fade();
 	}
 }
