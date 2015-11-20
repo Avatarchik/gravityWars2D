@@ -19,11 +19,13 @@ public class levelSelect : MonoBehaviour {
 	public void newLevel()
 	{
 		Application.LoadLevel("playScreen");
+		Time.timeScale = 1;
 	}
 
 	public void introScreen()
 	{
 		Application.LoadLevel("startScreen");
+		Time.timeScale = 1;
 	}
 
 	public void hideOptions()
