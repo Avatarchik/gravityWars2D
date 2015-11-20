@@ -16,12 +16,14 @@ public class changeText : MonoBehaviour {
  			playerState.instance.DisablePlayers();		//Singleton!!!
 			canvasText.text = "Player 2 wins";
  			canvasGroup.alpha = 1;
+ 			canvasGroup.blocksRaycasts = true;
  		}
  		else if (tag == "Player2")
  		{
  			playerState.instance.DisablePlayers();		//Singleton!!!
 			canvasText.text = "Player 1 wins";
  			canvasGroup.alpha = 1;
+ 			canvasGroup.blocksRaycasts = true;
 
 
  		}
