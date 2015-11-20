@@ -9,20 +9,12 @@ public class levelSelect : MonoBehaviour {
 	private GameObject optionsPanel;
 	private CanvasGroup optionsPanelCanvasGroup;
 
-	public GameObject player1;
-	public GameObject player2;
+	private GameObject player1;
+	private GameObject player2;
 
-	public CircleCollider2D player1Collider;
-	public CircleCollider2D player2Collider;
+	private CircleCollider2D player1Collider;
+	private CircleCollider2D player2Collider;
 
-	void Start(){
-		gameManager = GameObject.FindWithTag("gameManager");
-		playerStatus = gameManager.GetComponent<playerState>();
-
-
-		optionsPanel = GameObject.Find("options_panel");
-		optionsPanelCanvasGroup = optionsPanel.GetComponent<CanvasGroup>();
-	}
 
 	public void newLevel()
 	{
@@ -35,7 +27,14 @@ public class levelSelect : MonoBehaviour {
 	}
 
 	public void hideOptions()
-	{
+	{	
+		gameManager = GameObject.FindWithTag("gameManager");
+		playerStatus = gameManager.GetComponent<playerState>();
+
+
+		optionsPanel = GameObject.Find("options_panel");
+		optionsPanelCanvasGroup = optionsPanel.GetComponent<CanvasGroup>();
+
 		optionsPanelCanvasGroup.alpha = 0f;
 		optionsPanelCanvasGroup.blocksRaycasts = false;	
 
@@ -47,11 +46,20 @@ public class levelSelect : MonoBehaviour {
 
 		player1Collider.enabled = playerStatus.player1;
 		player2Collider.enabled = playerStatus.player2;
+
+		Time.timeScale = 1;
 	
 	}
 
 	public void showOptions()
 	{
+		gameManager = GameObject.FindWithTag("gameManager");
+		playerStatus = gameManager.GetComponent<playerState>();
+
+
+		optionsPanel = GameObject.Find("options_panel");
+		optionsPanelCanvasGroup = optionsPanel.GetComponent<CanvasGroup>();
+
 		optionsPanelCanvasGroup.alpha = 1f;
 		optionsPanelCanvasGroup.blocksRaycasts = true;
 
@@ -63,9 +71,11 @@ public class levelSelect : MonoBehaviour {
 
 		player1Collider.enabled = false;
 		player2Collider.enabled = false;
+
+		Time.timeScale = 0;
 	}
 
-	
+
 
 
 }
