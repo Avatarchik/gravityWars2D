@@ -4,7 +4,7 @@
     <ProjectSetting Value="0" ValueType="Int32" Key="VersionMajor" />
     <ProjectSetting Value="0" ValueType="Int32" Key="VersionMinor" />
     <ProjectSetting Value="0" ValueType="Int32" Key="VersionRevision" />
-    <ProjectSetting Value="4" ValueType="String" Key="VersionBuild" />
+    <ProjectSetting Value="5" ValueType="String" Key="VersionBuild" />
     <ProjectSetting Value="gravityWell" ValueType="String" Key="Title" />
     <ProjectSetting Value="borneproud" ValueType="String" Key="Company" />
     <ProjectSetting Value="True" ValueType="Boolean" Key="SetBundleIdentifier" />
