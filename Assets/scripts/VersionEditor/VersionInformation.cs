@@ -1,4 +1,4 @@
-/*Auto-Generated File from VersionEditor 2015.11.20 02:21:51 */
+/*Auto-Generated File from VersionEditor 2015.11.20 19:22:55 */
 
 namespace Assets.Scripts.VersionEditor {
 	public static class VersionInformation {
@@ -8,7 +8,7 @@ namespace Assets.Scripts.VersionEditor {
 		public const int Major = 0;
 		public const int Minor = 0;
 		public const int Revision = 0;
-		public const string Build = "4";
+		public const string Build = "5";
 
 		public const string Title = "gravityWell";
 		public const string Company = "borneproud";
