@@ -11,7 +11,6 @@ public class levelSelect : MonoBehaviour {
 
 	private Animator _animator;
 
-
 	public void newLevel()
 	{
 		Application.LoadLevel("playScreen");
@@ -26,8 +25,6 @@ public class levelSelect : MonoBehaviour {
 
 	public void showOptions()
 	{
-		gameManager = GameObject.FindWithTag("gameManager");
-
 		_animator = GameObject.Find("options_panel").GetComponent<Animator>();
 
 		_animator.SetTrigger("slideIn");
@@ -44,8 +41,7 @@ public class levelSelect : MonoBehaviour {
 	{	
 		Time.timeScale = 1;
 
-		gameManager = GameObject.FindWithTag("gameManager");
-		playerStatus = gameManager.GetComponent<playerState>();
+		playerStatus = GameObject.FindWithTag("gameManager").GetComponent<playerState>();
 
 		_animator = GameObject.Find("options_panel").GetComponent<Animator>();
 
