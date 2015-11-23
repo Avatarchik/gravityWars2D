@@ -3,6 +3,8 @@ using System.Collections;
 
 public class createPlanets : MonoBehaviour {
 
+	GameType _gameType;
+
 	[Range(2, 10)]
 	public int numberOfPlanets = 5;
 
@@ -146,6 +148,21 @@ public class createPlanets : MonoBehaviour {
 		return position;
 	}
 
+	void Awake() {
+		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+
+		if (_gameType.type == GameType.GameSelection.golf)
+			SetupGame();
+		else if(_gameType.type == GameType.GameSelection.vsAI)
+			SetupGame();
+		else if(_gameType.type == GameType.GameSelection.vsPlayer)
+			SetupGame();
+	}
+
+	void SetupGame () {
+		Debug.Log("setting up");
+
+	}
 
 	// Use this for initialization
 	void Start () {
