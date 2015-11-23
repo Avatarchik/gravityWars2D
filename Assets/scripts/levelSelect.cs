@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class levelSelect : MonoBehaviour {
 	private GameObject gameManager;
+	private GameObject persitentData;
+
+	private GameType _gameType;
 	private playerState playerStatus;
 
 	private CircleCollider2D player1Collider;
@@ -11,10 +14,23 @@ public class levelSelect : MonoBehaviour {
 
 	private Animator _animator;
 
+	public void Start(){
+		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+	}
+
 	public void newLevel()
 	{
+		_gameType.type = GameType.GameSelection.golf;
 		Application.LoadLevel("playScreen");
 		Time.timeScale = 1;
+	}
+
+	public void vsPlayer(){
+		_gameType.type = GameType.GameSelection.vsPlayer;
+	}
+
+	public void vsAI(){
+		_gameType.type = GameType.GameSelection.vsAI;
 	}
 
 	public void introScreen()
@@ -54,5 +70,7 @@ public class levelSelect : MonoBehaviour {
 		player2Collider.enabled = playerStatus.player2;
 	
 	}
+
+
 
 }
