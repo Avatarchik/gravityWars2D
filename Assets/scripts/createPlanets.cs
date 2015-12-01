@@ -148,24 +148,20 @@ public class createPlanets : MonoBehaviour {
 		return position;
 	}
 
-	void Awake() {
+	void Start() {
 		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
 
 		if (_gameType.type == GameType.GameSelection.golf)
-			SetupGame();
+			VsPlayer(); 
 		else if(_gameType.type == GameType.GameSelection.vsAI)
-			SetupGame();
+			//SetupGame();
 		else if(_gameType.type == GameType.GameSelection.vsPlayer)
-			SetupGame();
+			VsPlayer();
 	}
 
-	void SetupGame () {
-		Debug.Log("setting up");
-
-	}
 
 	// Use this for initialization
-	void Start () {
+	void VsPlayer () {
 
 		playerGroup = new GameObject("playerGroup");
 		gameManager = GameObject.FindWithTag("gameManager");
@@ -175,7 +171,7 @@ public class createPlanets : MonoBehaviour {
 
 		planetCreateScript = gameObject.GetComponent<createPlanets2>();
 
-
+		
 		for(int i = 0; i < numberOfPlanets; i++)
 		{
 			//random placement of planet
@@ -190,9 +186,8 @@ public class createPlanets : MonoBehaviour {
 			
 			planetCreateScript.planetCreate(worldPos, randomScale, i+1);
 			totalMass += mathTools.Remap(randomScale, .25f, 3f, 0, 10f);
-
-
 		}
+		
 
 		shipPosition("left");
 		worldPos = Camera.main.ScreenToWorldPoint(position);
@@ -216,6 +211,7 @@ public class createPlanets : MonoBehaviour {
 		}
 
 		createShip(worldPos, 2);					//Player 2 ship
+		
 
 		
 
