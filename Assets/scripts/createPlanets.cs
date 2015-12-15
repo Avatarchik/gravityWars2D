@@ -154,7 +154,7 @@ public class createPlanets : MonoBehaviour {
 		if (_gameType.type == GameType.GameSelection.golf)
 			VsPlayer(); 
 		else if(_gameType.type == GameType.GameSelection.vsAI)
-			//SetupGame();
+			VsPlayer();
 		else if(_gameType.type == GameType.GameSelection.vsPlayer)
 			VsPlayer();
 	}
