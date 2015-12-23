@@ -16,6 +16,7 @@ public class createPlanets : MonoBehaviour {
 	public GameObject planetGroup;
 	public GameObject playerGroup;
 	public GameObject gameManager;
+	public GameObject golfGoal;
 
 	//object to instantiate
 	public GameObject planet;
@@ -126,6 +127,51 @@ public class createPlanets : MonoBehaviour {
 		}
 	}
 
+	void createGoal (Vector2 worldPos,   
+					int playerOrder)
+	{
+		//set Orientation
+		shipRotate = Quaternion.identity * Quaternion.Euler(0, 180, 0);
+		shipName = "Ship B";
+		playerTag = "Player2";
+		engagedState = false;
+		turnSpeedSet = 50f;
+
+		ship = Instantiate(golfGoal, worldPos, shipRotate) as GameObject;
+		ship.name = shipName;
+		ship.tag = playerTag;											
+		ship.transform.parent = playerGroup.transform;
+		subShip = ship.transform.GetChild(0).gameObject;	
+		subShip.tag = playerTag;
+		playerGroup.transform.parent = gameManager.transform;				//parent to playerGroup
+
+
+		//activates or deactivates child's torpedo script based on engagedState flag
+		rotateScript = ship.GetComponentInChildren<rotate>();
+		//circleCollider2D = ship.GetComponentInChildren<CircleCollider2D>();
+		//circleCollider2D.enabled = engagedState;
+		rotateScript.enabled = engagedState;
+
+		//sets the rotate orientation
+		rotateScript.turnSpeed = turnSpeedSet;
+
+
+		//sets the playerIdentifier variable on the enableScript script
+		whichPlayer = ship.GetComponentInChildren<enableScript>();
+		whichPlayer.playerIdentifier = playerOrder;
+
+		//checks the player ship into the sceneManager
+
+		if (playerOrder == 1)
+		{
+			playerState.instance.playerObject = ship;		//Singleton!!
+		}
+		else if (playerOrder == 2)
+		{
+			playerState.instance.playerObject2 = ship;		//Singleton!!
+		}
+	}
+
 
 	//gives us the ship position accounting for our screen's borders
 	//Inputs: side of screen the ship will be on.
@@ -151,18 +197,6 @@ public class createPlanets : MonoBehaviour {
 	void Start() {
 		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
 
-		if (_gameType.type == GameType.GameSelection.golf)
-			VsPlayer(); 
-		else if(_gameType.type == GameType.GameSelection.vsAI)
-			VsPlayer();
-		else if(_gameType.type == GameType.GameSelection.vsPlayer)
-			VsPlayer();
-	}
-
-
-	// Use this for initialization
-	void VsPlayer () {
-
 		playerGroup = new GameObject("playerGroup");
 		gameManager = GameObject.FindWithTag("gameManager");
 
@@ -171,9 +205,7 @@ public class createPlanets : MonoBehaviour {
 
 		planetCreateScript = gameObject.GetComponent<createPlanets2>();
 
-		
-		for(int i = 0; i < numberOfPlanets; i++)
-		{
+		for(int i = 0; i < numberOfPlanets; i++){
 			//random placement of planet
 			position = new Vector2(Random.Range(0.0f, Screen.width), Random.Range(0.0f, Screen.height));
 			placeData(position, out worldPos, out randomScale);
@@ -187,8 +219,8 @@ public class createPlanets : MonoBehaviour {
 			planetCreateScript.planetCreate(worldPos, randomScale, i+1);
 			totalMass += mathTools.Remap(randomScale, .25f, 3f, 0, 10f);
 		}
-		
 
+		//Place player ship
 		shipPosition("left");
 		worldPos = Camera.main.ScreenToWorldPoint(position);
 
@@ -202,6 +234,7 @@ public class createPlanets : MonoBehaviour {
 
 		StartCoroutine(Wait(seconds));
 
+		//Place the opponent
 		shipPosition("right");
 		placeData(position, out worldPos, out randomScale);
 		
@@ -210,12 +243,31 @@ public class createPlanets : MonoBehaviour {
 			placeData(position, out worldPos, out randomScale);
 		}
 
-		createShip(worldPos, 2);					//Player 2 ship
-		
 
-		
-
+		if (_gameType.type == GameType.GameSelection.golf)
+			SoloPlay(); 
+		else if(_gameType.type == GameType.GameSelection.vsAI)
+			VsAI();
+		else if(_gameType.type == GameType.GameSelection.vsPlayer)
+			VsPlayer();
 	}
+
+
+	// Use this for initialization
+	void VsPlayer () {
+		createShip(worldPos, 2);					//Player 2 ship
+	
+	}
+
+	void SoloPlay () {
+		createGoal(worldPos, 2);					//Player 2 ship
+	
+	}
+
+	void VsAI () {
+	
+	}
+
 
 	IEnumerator Wait(float seconds){
 		startShip = ship;

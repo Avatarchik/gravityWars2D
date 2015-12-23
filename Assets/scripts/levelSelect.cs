@@ -27,6 +27,8 @@ public class levelSelect : MonoBehaviour {
 
 	public void vsPlayer(){
 		_gameType.type = GameType.GameSelection.vsPlayer;
+		Application.LoadLevel("playScreen");
+		Time.timeScale = 1;
 	}
 
 	public void vsAI(){
