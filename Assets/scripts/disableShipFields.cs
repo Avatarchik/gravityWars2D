@@ -7,8 +7,8 @@ public class disableShipFields : MonoBehaviour {
 	public GameObject shipA;
 	public GameObject shipB;
 
-	private ForceField2D shipAForceField;
-	private ForceField2D shipBForceField;
+	public ForceField2D shipAForceField;
+	public ForceField2D shipBForceField;
 
 
 	// Use this for initialization
@@ -27,7 +27,7 @@ public class disableShipFields : MonoBehaviour {
 		if (shipAForceField != null)
 			shipAForceField.enabled = false;
 
-		if (shipBForceField != null);
+		if (shipBForceField != null)
 			shipBForceField.enabled = false;
 	}
 
