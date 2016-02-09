@@ -8,7 +8,6 @@ public class changeText : MonoBehaviour {
 	private CanvasGroup canvasGroup;
 
 
-
  	public void messageState(string tag)
  	{
  		if (tag == "Player1")
@@ -17,6 +16,7 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 2 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
+
  		}
  		else if (tag == "Player2")
  		{
