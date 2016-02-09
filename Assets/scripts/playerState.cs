@@ -66,10 +66,17 @@ public class playerState : MonoBehaviour {
 		
 		//need to activate the torpedo gravity fields again.
 		shipA.GetComponentInChildren<ForceField2D>().enabled = true;
-		shipB.GetComponentInChildren<ForceField2D>().enabled = true;
 
-		player1 = !player1;
-		player2 = !player2;	
+		if(shipB.GetComponentInChildren<ForceField2D>() != null){
+			Debug.Log("found Ship B");
+			shipB.GetComponentInChildren<ForceField2D>().enabled = true;
+			
+			player1 = !player1;
+			player2 = !player2;	
+		}
+		
+
+		
 
 		resetCameraScript.smoothResetCamera();
 

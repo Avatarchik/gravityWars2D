@@ -5,8 +5,8 @@ using System.Reflection;
 public class enableScript : MonoBehaviour
 
 {
-    torpedo myScript;               //gets the torpedo function
-    rotate rotateScript;            //gets the rotate functionality
+    public torpedo myScript;               //gets the torpedo function
+    public rotate rotateScript;            //gets the rotate functionality
 
     public int playerIdentifier;
     
@@ -20,17 +20,20 @@ public class enableScript : MonoBehaviour
     
     public void playerSwitch(bool state)
     {
-        if (state)
-        {
-            myScript.enabled = true;
-            rotateScript.enabled = true;
+        if(myScript != null){
+            if (state)
+            {
+                myScript.enabled = true;
+                rotateScript.enabled = true;
 
+            }
+            else
+            {
+                myScript.enabled = false;
+                rotateScript.enabled = false;
+            }
+            myScript.cdFlag = true; 
         }
-        else
-        {
-            myScript.enabled = false;
-            rotateScript.enabled = false;
-        }
-        myScript.cdFlag = true;
+        
     }
 }
