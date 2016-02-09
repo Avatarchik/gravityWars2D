@@ -68,7 +68,6 @@ public class playerState : MonoBehaviour {
 		shipA.GetComponentInChildren<ForceField2D>().enabled = true;
 
 		if(shipB.GetComponentInChildren<ForceField2D>() != null){
-			Debug.Log("found Ship B");
 			shipB.GetComponentInChildren<ForceField2D>().enabled = true;
 			
 			player1 = !player1;

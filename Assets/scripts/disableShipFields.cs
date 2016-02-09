@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class disableShipFields : MonoBehaviour {
-	/*
+	
 
 	public GameObject shipA;
 	public GameObject shipB;
@@ -31,7 +31,6 @@ public class disableShipFields : MonoBehaviour {
 			shipBForceField.enabled = false;
 	}
 
-	*/
 
 
 

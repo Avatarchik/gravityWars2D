@@ -148,8 +148,8 @@ public class createPlanets : MonoBehaviour {
 
 		//activates or deactivates child's torpedo script based on engagedState flag
 		rotateScript = ship.GetComponentInChildren<rotate>();
-		//circleCollider2D = ship.GetComponentInChildren<CircleCollider2D>();
-		//circleCollider2D.enabled = engagedState;
+		circleCollider2D = ship.GetComponentInChildren<CircleCollider2D>();
+		circleCollider2D.enabled = engagedState;
 		rotateScript.enabled = engagedState;
 
 		//sets the rotate orientation
