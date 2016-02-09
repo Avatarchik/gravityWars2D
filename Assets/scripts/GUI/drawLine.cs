@@ -57,22 +57,21 @@ public class drawLine : MonoBehaviour {
 
 	}
 	
-	void OnMouseDown() 
-	{
-		mousePos = Camera.main.WorldToScreenPoint(transform.position);
-		mousePos.z = 1.0f;
-		firstPos = Camera.main.ScreenToWorldPoint(mousePos);
-		worldPos = firstPos;
-
-		targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-		confirmTarget.transform.position = mousePos;
-
-		StartCoroutine("smoothAlpha");
-
-	}
-	
 	void OnMouseDrag()
 	{
+		//place targetingPanel
+		if (targetingPanelCanvasGroup.alpha == 0){
+			mousePos = Camera.main.WorldToScreenPoint(transform.position);
+			mousePos.z = 1.0f;
+			firstPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+			targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+			confirmTarget.transform.position = mousePos;
+
+			StartCoroutine("smoothAlpha");
+		}
+		
+
 		mousePos = Input.mousePosition;
 		mousePos.z = 1.0f;
 		worldPos = Camera.main.ScreenToWorldPoint(mousePos);

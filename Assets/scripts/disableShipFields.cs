@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class disableShipFields : MonoBehaviour {
+	
 
 	public GameObject shipA;
 	public GameObject shipB;
+
+	public ForceField2D shipAForceField;
+	public ForceField2D shipBForceField;
 
 
 	// Use this for initialization
@@ -12,14 +16,21 @@ public class disableShipFields : MonoBehaviour {
 		shipA = GameObject.FindWithTag("Player1");
 		shipB = GameObject.FindWithTag("Player2");
 
+		shipAForceField = shipA.GetComponentInChildren<ForceField2D>();
+		shipBForceField = shipB.GetComponentInChildren<ForceField2D>();
+
 		Invoke ("DisableFields", .2f);
 	}
 
 	void DisableFields()
 	{
-		shipA.GetComponentInChildren<ForceField2D>().enabled = false;
-		shipB.GetComponentInChildren<ForceField2D>().enabled = false;
+		if (shipAForceField != null)
+			shipAForceField.enabled = false;
+
+		if (shipBForceField != null)
+			shipBForceField.enabled = false;
 	}
+
 
 
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class levelSelect : MonoBehaviour {
 	private GameObject gameManager;
@@ -21,12 +22,15 @@ public class levelSelect : MonoBehaviour {
 	public void newLevel()
 	{
 		_gameType.type = GameType.GameSelection.golf;
-		Application.LoadLevel("playScreen");
+		SceneManager.LoadScene("playScreen");
 		Time.timeScale = 1;
 	}
 
 	public void vsPlayer(){
 		_gameType.type = GameType.GameSelection.vsPlayer;
+		SceneManager.LoadScene("playScreen");
+
+		Time.timeScale = 1;
 	}
 
 	public void vsAI(){
@@ -35,7 +39,8 @@ public class levelSelect : MonoBehaviour {
 
 	public void introScreen()
 	{
-		Application.LoadLevel("startScreen");
+		SceneManager.LoadScene("startScreen");
+
 		Time.timeScale = 1;
 	}
 

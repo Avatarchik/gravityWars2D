@@ -195,7 +195,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2248,6 +2250,7 @@ MonoBehaviour:
   planetGroup: {fileID: 0}
   playerGroup: {fileID: 0}
   gameManager: {fileID: 0}
+  golfGoal: {fileID: 0}
   planet: {fileID: 100000, guid: a8a92e57cf71f4fdc8132fc071d0e0e8, type: 2}
   ship: {fileID: 100000, guid: aa9ac1f1597fe4850aa5614a570998ef, type: 2}
   turnSpeedSet: 0
