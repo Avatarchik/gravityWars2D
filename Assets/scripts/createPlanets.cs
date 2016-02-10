@@ -3,7 +3,7 @@ using System.Collections;
 
 public class createPlanets : MonoBehaviour {
 
-	GameType _gameType;
+	public GameType _gameType;
 
 	[Range(2, 10)]
 	public int numberOfPlanets = 5;
@@ -250,6 +250,7 @@ public class createPlanets : MonoBehaviour {
 			VsAI();
 		else if(_gameType.type == GameType.GameSelection.vsPlayer)
 			VsPlayer();
+
 	}
 
 

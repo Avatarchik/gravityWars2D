@@ -21,15 +21,25 @@ public class levelSelect : MonoBehaviour {
 
 	public void newLevel()
 	{
-		_gameType.type = GameType.GameSelection.golf;
-		SceneManager.LoadScene("playScreen");
-		Time.timeScale = 1;
+		if (_gameType.type == GameType.GameSelection.golf)
+			golf();
+		else if (_gameType.type == GameType.GameSelection.vsPlayer)
+			vsPlayer();
+		else if (_gameType.type == GameType.GameSelection.vsAI)
+			golf();
 	}
 
 	public void vsPlayer(){
 		_gameType.type = GameType.GameSelection.vsPlayer;
 		SceneManager.LoadScene("playScreen");
 
+		Time.timeScale = 1;
+	}
+
+	public void golf()
+	{
+		_gameType.type = GameType.GameSelection.golf;
+		SceneManager.LoadScene("playScreen");
 		Time.timeScale = 1;
 	}
 
