@@ -7,6 +7,7 @@ public class changeText : MonoBehaviour {
 	private Text canvasText;
 	private CanvasGroup canvasGroup;
 	private Score _score;
+	private ChangeMessage _changeMessage;
 
 
  	public void messageState(string tag)
@@ -34,11 +35,11 @@ public class changeText : MonoBehaviour {
  		}
  		else if (tag == "border")
  		{
- 			Debug.Log("Torpedo has left the system");
+ 			_changeMessage.ChangeText("Projectile lost");
  		}
  		else if (tag == "Planet")
  		{
- 			_score.scoreNumber += 1;
+ 			_score.scoreNumber += 10;
  			_score.UpdateScore();
  		}
  	}
@@ -47,6 +48,7 @@ public class changeText : MonoBehaviour {
  		canvasText = GetComponent<Text>();
  		canvasGroup = gameObject.GetComponentInParent<CanvasGroup>();
  		_score = GameObject.FindWithTag("gameManager").GetComponent<Score>();
+ 		_changeMessage = GameObject.Find("message_text").GetComponent<ChangeMessage>();
  	}
 
 }
