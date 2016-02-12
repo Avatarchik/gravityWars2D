@@ -7,6 +7,8 @@ public class destroyOnCollision : MonoBehaviour
 	private changeText changeText;
 	private string objectHit;
 
+	public float fuseTimer = .1f;
+
 	//When the torpedo collides, detect what it has collided with, then send that info to the canvas.
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -23,7 +25,17 @@ public class destroyOnCollision : MonoBehaviour
 	{
 		canvas = GameObject.FindObjectOfType<Canvas>();
 		changeText = canvas.GetComponentInChildren<changeText>();
+		StartCoroutine(bulletLifeSpan(fuseTimer));
 
 	}
 
+	IEnumerator bulletLifeSpan(float fuseTimer){
+		yield return new WaitForSeconds(fuseTimer);
+		gameObject.SetActive(false);
+		playerState.instance.playerSwitch();
+		changeText.messageState("fuse");
+	}
+
 }
+
+	

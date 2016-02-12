@@ -82,7 +82,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .479943454, y: .479943454, z: .479943454}
+  m_LocalScale: {x: 0.47994345, y: 0.47994345, z: 0.47994345}
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .693506181, y: .334220052, z: .334220052}
+  m_LocalScale: {x: 0.6935062, y: 0.33422005, z: 0.33422005}
   m_Children:
   - {fileID: 476850}
   m_Father: {fileID: 400000}
@@ -119,8 +119,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .640999973, y: 0, z: 0}
-  m_LocalScale: {x: .28096354, y: .582999051, z: .582999051}
+  m_LocalPosition: {x: 0.641, y: 0, z: 0}
+  m_LocalScale: {x: 0.28096354, y: 0.58299905, z: 0.58299905}
   m_Children:
   - {fileID: 416834}
   m_Father: {fileID: 400006}
@@ -146,7 +146,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -172,7 +172,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -198,6 +198,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -211,6 +212,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -230,8 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 400000, guid: 0088eda7142354f6cb7d942e7b0d31d2, type: 2}
   oneFire: 1
-  cd: .5
-  bulletLife: 10
+  cd: 0.5
+  bulletLife: 0.5
   field: {fileID: 11466210}
   force: 20
   bulletGarvity: 0
@@ -249,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRender: {fileID: 12000000}
-  radius: 3.20000005
+  radius: 3.2
   targetingPanel: {fileID: 0}
   imageScale: {x: 1, y: 1, z: 1}
   screenScale: 6
@@ -265,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099e9fafbf11e4d3c8d94cf5279f7bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothOut: .150000006
+  smoothOut: 0.15
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4723ef890b704da3b51f078fe0bbfb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myScript: {fileID: 0}
+  rotateScript: {fileID: 0}
   playerIdentifier: 0
 --- !u!114 &11447654
 MonoBehaviour:
@@ -359,6 +363,7 @@ MonoBehaviour:
           m_Curve: []
           m_PreInfinity: 2
           m_PostInfinity: 2
+          m_RotationOrder: 4
         boundAtZero: 1
         a: 2
         b: 0
@@ -375,6 +380,7 @@ MonoBehaviour:
           m_Curve: []
           m_PreInfinity: 2
           m_PostInfinity: 2
+          m_RotationOrder: 4
         boundAtZero: 1
         a: 1
         b: 0
@@ -393,7 +399,7 @@ MonoBehaviour:
   pointerXCount: 11
   pointerYCount: 11
   strongThreshold: 2
-  weakThreshold: .100000001
+  weakThreshold: 0.1
   strongPointerColor: {r: 1, g: 0, b: 0, a: 1}
   weakPointerColor: {r: 0, g: 1, b: 0, a: 1}
   raycastColor: {r: 0, g: 1, b: 1, a: 1}
@@ -418,7 +424,7 @@ LineRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -427,8 +433,8 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: .00999999978
-    endWidth: .00999999978
+    startWidth: 0.01
+    endWidth: 0.01
     m_StartColor:
       serializedVersion: 2
       rgba: 4294967295
