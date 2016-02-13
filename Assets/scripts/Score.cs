@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 	public int scoreNumber = 0;
+	public int scoreIncrease = 0;
 	public Text _text;
 	public float duration = 0.5f;
 	public int target = 0;
@@ -15,7 +16,8 @@ public class Score : MonoBehaviour {
 			_text.text = "0";			
 		}
 	
-	public void UpdateScore(){
+	public void UpdateScore(int scoreIncrease){
+		scoreNumber += scoreIncrease;
 		StartCoroutine("IncrementScore", scoreNumber);
 
 	}

@@ -18,8 +18,7 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 2 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.scoreNumber += 100;
- 			_score.UpdateScore();
+ 			_score.UpdateScore(100);
 
  		}
  		else if (tag == "Player2")
@@ -28,8 +27,7 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 1 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.scoreNumber += 100;
- 			_score.UpdateScore();
+ 			_score.UpdateScore(100);
 
 
  		}
@@ -40,8 +38,7 @@ public class changeText : MonoBehaviour {
  		}
  		else if (tag == "Planet")
  		{
- 			_score.scoreNumber += 10;
- 			_score.UpdateScore();
+ 			
  		}
  		else {
  			_changeMessage.ChangeText("Fuse Expired");
