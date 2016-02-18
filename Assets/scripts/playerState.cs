@@ -12,6 +12,8 @@ using System.Collections;
 
 public class playerState : MonoBehaviour {
 
+	public enum gameState{playState, waitState};
+	public gameState _gameState;
 
 	public bool player1 = true;
 	public bool player2 = false;
@@ -128,8 +130,6 @@ public class playerState : MonoBehaviour {
 		playerObject2.GetComponent<Collider2D>().enabled = false;
 	}
 
-
-
 	public void Start()
 	{
 		targetingPanel_A = GameObject.Find("targetingText_A_panel");
@@ -142,6 +142,12 @@ public class playerState : MonoBehaviour {
 		actionCenter = GameObject.Find("actionCenter");
 		gameCenterScript = actionCenter.GetComponent<gameCenter>();
 		resetCameraScript = Camera.main.GetComponent<resetCamera>();
+
+		_gameState = gameState.waitState;
+	}
+
+	public void PlayState(){
+		_gameState = gameState.playState;
 	}
 }
 

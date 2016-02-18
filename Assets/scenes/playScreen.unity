@@ -305,7 +305,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.07403922, g: 0.106248364, b: 0.15686275, a: 0.141}
+  m_BackGroundColor: {r: 0.08431601, g: 0.151577, b: 0.19700003, a: 0.141}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1712,6 +1712,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3bfc5d6c6c745eeb13291a7d820045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1175820710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1175820712}
+  - 114: {fileID: 1175820711}
+  - 114: {fileID: 1175820713}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1175820711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175820710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d2fbc203ac947ac912b83de9e46aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1175820712
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175820710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &1175820713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175820710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: befde38b851f04e6ab9188a986d77cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameState: 1
 --- !u!1 &1220127351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,6 +2596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6f7ef5a4c5d47fba813380d0c94cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameState: 0
   player1: 1
   player2: 0
   activePlayer: Player1
@@ -2621,6 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreNumber: 0
+  scoreIncrease: 0
   _text: {fileID: 0}
   duration: 0.5
   target: 0
@@ -2720,7 +2774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3271,7 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

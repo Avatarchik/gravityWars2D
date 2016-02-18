@@ -36,6 +36,8 @@ public class torpedo : MonoBehaviour
 	public bool mouseFire = false;
 	private gui guiScript;
 
+	private GameState _GameState;
+
 	private destroyOnCollision destroyScript;
 
 
@@ -48,6 +50,8 @@ public class torpedo : MonoBehaviour
 
 		sceneManager = GameObject.FindWithTag("gameManager");
 		guiScript = sceneManager.GetComponent<gui>();
+
+		_GameState = GameObject.Find("EventManager").GetComponent<GameState>();
 	}
 	
 	// Update is called once per frame
@@ -81,6 +85,8 @@ public class torpedo : MonoBehaviour
 		t.position = transform.TransformPoint(pos);
 		t.rotation = transform.rotation;
 		playerState.instance.DisableInput();
+		//EventManager.TriggerEvent("playState");
+		_GameState.SetStatePlay();
 	}
 	
 	IEnumerator cooldown()
