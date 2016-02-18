@@ -58,6 +58,8 @@ public class createPlanets : MonoBehaviour {
 
 	createPlanets2 planetCreateScript;
 
+	public GameObject persistentDataObject;
+
 
 	void placeData (Vector2 range, out Vector2 worldPos, out float randomScale)
 	{
@@ -194,9 +196,20 @@ public class createPlanets : MonoBehaviour {
 		return position;
 	}
 
-	void Start() {
-		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+	void Awake() {
+		if(GameObject.Find("persistentData")!= null){
+			_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+		}
+		else{
+			GameObject persistentData = Instantiate(persistentDataObject);
+			persistentData.name = "persistentData";
+			_gameType = persistentDataObject.GetComponent<GameType>();
 
+		}
+	}
+
+
+	void Start() {
 		playerGroup = new GameObject("playerGroup");
 		gameManager = GameObject.FindWithTag("gameManager");
 
