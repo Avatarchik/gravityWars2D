@@ -68,7 +68,7 @@ GameObject:
   - 4: {fileID: 414408}
   - 114: {fileID: 11479440}
   - 58: {fileID: 5857556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: nearCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
