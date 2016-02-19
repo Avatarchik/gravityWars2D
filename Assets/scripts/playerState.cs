@@ -148,6 +148,7 @@ public class playerState : MonoBehaviour {
 
 	public void PlayState(){
 		_gameState = gameState.playState;
+		//gameObject.BroadcastMessage()
 	}
 }
 
