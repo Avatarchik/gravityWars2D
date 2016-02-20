@@ -18,7 +18,7 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 2 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.UpdateScore(100);
+ 			_score.EndScore();
 
  		}
  		else if (tag == "Player2")
@@ -27,7 +27,7 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 1 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.UpdateScore(100);
+ 			_score.EndScore();
 
 
  		}

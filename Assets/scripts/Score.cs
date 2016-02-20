@@ -10,10 +10,14 @@ public class Score : MonoBehaviour {
 	public int target = 0;
 	public int scoreCounter = 0;
 
+	private int numberOfTurns;
+
 	void Start()
 		{
 			_text = GameObject.Find("scoreNumber_text").GetComponent<Text>();
-			_text.text = "0";			
+			_text.text = "0";
+
+			numberOfTurns = gameObject.GetComponent<playerState>().player1Stats;		
 		}
 	
 	public void UpdateScore(int scoreIncrease){
@@ -31,6 +35,14 @@ public class Score : MonoBehaviour {
 			_text.text = scoreCounter.ToString();
 			yield return null;
 		}
+
+	}
+
+	public void EndScore(){
+		numberOfTurns = (gameObject.GetComponent<playerState>().player1Stats);
+		Debug.Log(Mathf.Pow(2, -numberOfTurns));
+		scoreNumber += (int)(18000*(Mathf.Pow(2, -numberOfTurns))) + 150;
+		StartCoroutine("IncrementScore", scoreNumber);
 
 	}
 
