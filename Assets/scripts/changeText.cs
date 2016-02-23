@@ -34,7 +34,6 @@ public class changeText : MonoBehaviour {
  		else if (tag == "border")
  		{
  			_changeMessage.ChangeText("Projectile lost");
- 			Debug.Log("torpedo has left the system");
  		}
  		else if (tag == "Planet")
  		{
