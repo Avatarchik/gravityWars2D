@@ -15,8 +15,12 @@ public class levelSelect : MonoBehaviour {
 
 	private Animator _animator;
 
+	private CanvasGroup scoreCanvasGroup;
+	private CanvasGroup menuCanvasGroup;
+
 	public void Start(){
 		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+		
 	}
 
 	public void newLevel()
@@ -43,8 +47,26 @@ public class levelSelect : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 
-	public void vsAI(){
-		_gameType.type = GameType.GameSelection.vsAI;
+	public void statScreen(){
+		scoreCanvasGroup = GameObject.Find("Score_panel").GetComponent<CanvasGroup>();
+		menuCanvasGroup = GameObject.Find("Menu_panel").GetComponent<CanvasGroup>();
+
+		menuCanvasGroup.alpha = 0;
+		menuCanvasGroup.blocksRaycasts = false;
+
+		scoreCanvasGroup.alpha = 1;
+		scoreCanvasGroup.blocksRaycasts = true;
+	}
+
+	public void menuScreen(){
+		scoreCanvasGroup = GameObject.Find("Score_panel").GetComponent<CanvasGroup>();
+		menuCanvasGroup = GameObject.Find("Menu_panel").GetComponent<CanvasGroup>();
+		
+		menuCanvasGroup.alpha = 1;
+		menuCanvasGroup.blocksRaycasts = true;
+
+		scoreCanvasGroup.alpha = 0;
+		scoreCanvasGroup.blocksRaycasts = false;
 	}
 
 	public void introScreen()

@@ -11,13 +11,17 @@ public class Score : MonoBehaviour {
 	public int scoreCounter = 0;
 
 	private int numberOfTurns;
+	string highScoreKey = "HighScore";
+	public int highScore = 0;
 
 	void Start()
 		{
 			_text = GameObject.Find("scoreNumber_text").GetComponent<Text>();
 			_text.text = "0";
 
-			numberOfTurns = gameObject.GetComponent<playerState>().player1Stats;		
+			numberOfTurns = gameObject.GetComponent<playerState>().player1Stats;
+
+			highScore = PlayerPrefs.GetInt(highScoreKey);		
 		}
 	
 	public void UpdateScore(int scoreIncrease){
@@ -40,9 +44,13 @@ public class Score : MonoBehaviour {
 
 	public void EndScore(){
 		numberOfTurns = (gameObject.GetComponent<playerState>().player1Stats);
-		Debug.Log(Mathf.Pow(2, -numberOfTurns));
 		scoreNumber += (int)(18000*(Mathf.Pow(2, -numberOfTurns))) + 150;
 		StartCoroutine("IncrementScore", scoreNumber);
+
+		if(scoreNumber > highScore){
+			PlayerPrefs.SetInt(highScoreKey, scoreNumber);
+			PlayerPrefs.Save();
+		}
 
 	}
 
