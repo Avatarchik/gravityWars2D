@@ -169,7 +169,7 @@ GameObject:
   - 222: {fileID: 123455920}
   - 114: {fileID: 123455919}
   m_Layer: 5
-  m_Name: ShotsToGoalData_text
+  m_Name: NumberOfGames_Data_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ GameObject:
   - 222: {fileID: 314237675}
   - 114: {fileID: 314237674}
   m_Layer: 5
-  m_Name: ShotsToGoal_text
+  m_Name: NumberOfGames_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Shots to Goal '
+  m_Text: Number of Games Played
 --- !u!222 &314237675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2288,6 +2288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e59b3088f54142a0fb2180ec0e55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfGames: 0
 --- !u!1 &1714179244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,8 +2790,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
-  m_SizeDelta: {x: 230.9, y: 128.2}
+  m_AnchoredPosition: {x: -0.0000019073486, y: 0}
+  m_SizeDelta: {x: 283.7, y: 128.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891005602
 MonoBehaviour:
@@ -2829,7 +2830,7 @@ GameObject:
   - 222: {fileID: 2004576303}
   - 114: {fileID: 2004576302}
   m_Layer: 5
-  m_Name: ShotsToGoal_panel
+  m_Name: numberOfGames_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,6 +9,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class playerState : MonoBehaviour {
 
@@ -20,8 +21,8 @@ public class playerState : MonoBehaviour {
 
 	public string activePlayer = "Player1";
 
-	public int player1Stats = 0;
-	public int player2Stats = 0;
+	public int player1Stats = 1;
+	public int player2Stats = 1;
 
 	public GameObject playerObject;
 	public GameObject playerObject2;
@@ -44,6 +45,8 @@ public class playerState : MonoBehaviour {
 
 	public Color player1Color;
 	public Color player2Color;
+
+	private Text turnsText;
 
 
 	//This bit here turns this into a singleton
@@ -110,6 +113,8 @@ public class playerState : MonoBehaviour {
 		player1Switch.playerSwitch(player1);
 		player2Switch.playerSwitch(player2);
 
+		turnsText.text = player1Stats.ToString();
+
 		//playerState.instance.playerSwitch();		//Singleton!!!
 	}
 	
@@ -144,6 +149,8 @@ public class playerState : MonoBehaviour {
 		resetCameraScript = Camera.main.GetComponent<resetCamera>();
 
 		_gameState = gameState.waitState;
+
+		turnsText = GameObject.Find("turnNumber_text").GetComponent<Text>();
 	}
 
 	public void PlayState(){

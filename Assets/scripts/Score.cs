@@ -14,6 +14,14 @@ public class Score : MonoBehaviour {
 	string highScoreKey = "HighScore";
 	public int highScore = 0;
 
+	string numberOfTurnsKey = "NumberOfTurns";
+
+	string numberOfGamesKey = "NumberOfGames";
+	public int numberOfGames = 0;
+
+	string totalScoreKey = "TotalScore";
+	public int totalScore = 0;
+
 	void Start()
 		{
 			_text = GameObject.Find("scoreNumber_text").GetComponent<Text>();
@@ -21,7 +29,8 @@ public class Score : MonoBehaviour {
 
 			numberOfTurns = gameObject.GetComponent<playerState>().player1Stats;
 
-			highScore = PlayerPrefs.GetInt(highScoreKey);		
+			highScore = PlayerPrefs.GetInt(highScoreKey);
+
 		}
 	
 	public void UpdateScore(int scoreIncrease){
@@ -43,14 +52,27 @@ public class Score : MonoBehaviour {
 	}
 
 	public void EndScore(){
-		numberOfTurns = (gameObject.GetComponent<playerState>().player1Stats);
+		numberOfTurns = (gameObject.GetComponent<playerState>().player1Stats) -1;
 		scoreNumber += (int)(18000*(Mathf.Pow(2, -numberOfTurns))) + 150;
 		StartCoroutine("IncrementScore", scoreNumber);
 
 		if(scoreNumber > highScore){
 			PlayerPrefs.SetInt(highScoreKey, scoreNumber);
-			PlayerPrefs.Save();
 		}
+
+		totalScore = PlayerPrefs.GetInt(totalScoreKey);
+		totalScore += scoreNumber;
+		PlayerPrefs.SetInt(totalScoreKey, totalScore);
+
+		numberOfTurns += PlayerPrefs.GetInt(numberOfTurnsKey) - 1;
+		PlayerPrefs.SetInt(numberOfTurnsKey, numberOfTurns);
+
+		numberOfGames = PlayerPrefs.GetInt(numberOfGamesKey) + 1;
+		PlayerPrefs.SetInt(numberOfGamesKey, numberOfGames);
+
+		PlayerPrefs.Save();
+
+		Debug.Log("SetPrefs");
 
 	}
 
