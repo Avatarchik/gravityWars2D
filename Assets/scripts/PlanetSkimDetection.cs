@@ -24,7 +24,7 @@ public class PlanetSkimDetection : MonoBehaviour {
 		if(_colliderType == colliderType.planet){
 			_floatingScores.UpdateLocation(gameObject,10);
 			_changeMessage.ChangeText("planetSkimmer");
-			_score.UpdateScore(10);
+			_score.UpdateScore(10, 1.5f);
 		}
 		else if(_colliderType == colliderType.ship){
 			if (initializeCollider == false){
@@ -33,13 +33,13 @@ public class PlanetSkimDetection : MonoBehaviour {
 			else{
 				_floatingScores.UpdateLocation(gameObject,30);
 				_changeMessage.ChangeText("Close Call!");
-				_score.UpdateScore(30);
+				_score.UpdateScore(30, 3f);
 			}
 		}
 		else if(_colliderType == colliderType.goal){
 			_floatingScores.UpdateLocation(gameObject,30);
 			_changeMessage.ChangeText("So Close!");
-			_score.UpdateScore(30);
+			_score.UpdateScore(30, 3f);
 		}	
 	}
 

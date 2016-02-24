@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class Score : MonoBehaviour {
 	public int scoreNumber = 0;
 	public int scoreIncrease = 0;
-	public Text _text;
+	public Text _scoreNumberText;
+
+	public Text _multiplierText;
+	public float multiplier;
+	private string originalMultiplier;
+
 	public float duration = 0.5f;
 	public int target = 0;
 	public int scoreCounter = 0;
@@ -22,10 +29,15 @@ public class Score : MonoBehaviour {
 	string totalScoreKey = "TotalScore";
 	public int totalScore = 0;
 
+	//Messenger
+	private UnityAction someListener;
+
 	void Start()
 		{
-			_text = GameObject.Find("scoreNumber_text").GetComponent<Text>();
-			_text.text = "0";
+			_scoreNumberText = GameObject.Find("scoreNumber_text").GetComponent<Text>();
+			_scoreNumberText.text = "0";
+
+			_multiplierText = GameObject.Find("multiplierNumber_text").GetComponent<Text>();
 
 			numberOfTurns = gameObject.GetComponent<playerState>().player1Stats;
 
@@ -33,8 +45,10 @@ public class Score : MonoBehaviour {
 
 		}
 	
-	public void UpdateScore(int scoreIncrease){
+	public void UpdateScore(int scoreIncrease, float multiplier){
 		scoreNumber += scoreIncrease;
+		originalMultiplier = _multiplierText.text;
+		_multiplierText.text = multiplier.ToString() + "x " + originalMultiplier;
 		StartCoroutine("IncrementScore", scoreNumber);
 
 	}
@@ -45,7 +59,7 @@ public class Score : MonoBehaviour {
 		for (float timer = 0; timer < duration; timer += Time.deltaTime){
 			float progress = timer / duration;
 			scoreCounter = 1+((int)Mathf.Lerp (start, scoreNumber, progress));
-			_text.text = scoreCounter.ToString();
+			_scoreNumberText.text = scoreCounter.ToString();
 			yield return null;
 		}
 
@@ -72,9 +86,28 @@ public class Score : MonoBehaviour {
 
 		PlayerPrefs.Save();
 
-		Debug.Log("SetPrefs");
-
 	}
+
+		//MESSAGING
+	void Awake ()
+    {
+        someListener = new UnityAction (waitState);
+    }
+
+    void OnEnable ()
+    {
+        EventManager.StartListening ("waitState", waitState);
+    }
+
+    void OnDisable ()
+    {
+        EventManager.StopListening ("waitState", waitState);
+    }
+
+    void waitState ()
+    {
+        _multiplierText.text = "";
+    }
 
 }
 
