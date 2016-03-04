@@ -11,6 +11,7 @@ public class Score : MonoBehaviour {
 
 	public Text _multiplierText;
 	public float multiplier;
+	public float newMultiplier;
 	private string originalMultiplier;
 
 	public float duration = 0.5f;
@@ -45,10 +46,11 @@ public class Score : MonoBehaviour {
 
 		}
 	
-	public void UpdateScore(int scoreIncrease, float multiplier){
+	public void UpdateScore(int scoreIncrease, float newMultiplier){
 		scoreNumber += scoreIncrease;
+		multiplier *= newMultiplier;
 		originalMultiplier = _multiplierText.text;
-		_multiplierText.text = multiplier.ToString() + "x " + originalMultiplier;
+		_multiplierText.text = newMultiplier.ToString() + "x " + originalMultiplier;
 		StartCoroutine("IncrementScore", scoreNumber);
 
 	}
@@ -67,7 +69,7 @@ public class Score : MonoBehaviour {
 
 	public void EndScore(){
 		numberOfTurns = (gameObject.GetComponent<playerState>().player1Stats) -1;
-		scoreNumber += (int)(18000*(Mathf.Pow(2, -numberOfTurns))) + 150;
+		scoreNumber += (int) (((18000*(Mathf.Pow(2, -numberOfTurns))) + 150) * multiplier);
 		StartCoroutine("IncrementScore", scoreNumber);
 
 		if(scoreNumber > highScore){
@@ -106,6 +108,7 @@ public class Score : MonoBehaviour {
 
     void waitState ()
     {
+    	multiplier = 1f;
         _multiplierText.text = "";
     }
 
