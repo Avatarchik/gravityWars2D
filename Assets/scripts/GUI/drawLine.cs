@@ -20,6 +20,9 @@ public class drawLine : MonoBehaviour {
 
 	public GameObject targetingPanel;
 	GameObject confirmTarget;
+
+	GameObject decreasePowerPanel;
+
 	CanvasGroup confirmTargetCanvasGroup;
 	CanvasGroup targetingPanelCanvasGroup;
 
@@ -52,8 +55,7 @@ public class drawLine : MonoBehaviour {
         confirmTarget = GameObject.Find("targetingInfoPanel");
         confirmTargetCanvasGroup = confirmTarget.GetComponent<CanvasGroup>();
 
-
-
+        decreasePowerPanel = GameObject.Find("decreasePower_panel");
 
 	}
 	
@@ -67,6 +69,7 @@ public class drawLine : MonoBehaviour {
 
 			targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
 			confirmTarget.transform.position = mousePos;
+			decreasePowerPanel.transform.position = mousePos;
 
 			StartCoroutine("smoothAlpha");
 		}
@@ -78,13 +81,13 @@ public class drawLine : MonoBehaviour {
 
 		lineDirection = worldPos - firstPos;		//get the vector
 
+		// place the targeting widgets around the target reticle
+		confirmTarget.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.25f *radius)));
+
+		decreasePowerPanel.transform.position = Camera.main.WorldToScreenPoint(firstPos + -(lineDirection.normalized * (1.25f *radius)));
+
 		//limit the line length
 		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
-
-		radiusLimit = Camera.main.WorldToScreenPoint(firstPos + (lineDirection.normalized * (1.25f * radius)));
-		confirmTarget.transform.position = radiusLimit;
-
-
 		mousePos = Camera.main.WorldToScreenPoint(worldPos);
 
 		lineRender.SetPosition(0, firstPos);
@@ -103,7 +106,7 @@ public class drawLine : MonoBehaviour {
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
 		guiScript.testNumber = (int)normalizeDistance;
 	}
-
+	
 	
 	public void FireTorpedo()
 	{

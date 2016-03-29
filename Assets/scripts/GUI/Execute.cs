@@ -21,7 +21,7 @@ public class Execute : MonoBehaviour {
 		sceneManager = GameObject.FindWithTag("gameManager");
 		playerStateScript = sceneManager.GetComponent<playerState>();
 
-		_canvasGroup = childButton.GetComponent<CanvasGroup>();
+		//_canvasGroup = childButton.GetComponent<CanvasGroup>();
 
 
 	}
