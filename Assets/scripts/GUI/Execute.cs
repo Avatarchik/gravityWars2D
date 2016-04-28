@@ -14,7 +14,7 @@ public class Execute : MonoBehaviour {
 	GameObject currentPlayer;
 
 	public GameObject childButton;
-	CanvasGroup _canvasGroup;
+	//CanvasGroup _canvasGroup;
 
 
 	void Start(){
@@ -31,7 +31,7 @@ public class Execute : MonoBehaviour {
 		currentPlayer = GameObject.FindWithTag(playerStateScript.activePlayer);
 		drawLine drawLineScript = currentPlayer.GetComponent<drawLine>();
 		drawLineScript.FireTorpedo();
-		_canvasGroup.alpha = 0;
+		//_canvasGroup.alpha = 0;
 	}
 
 	public void onPointerDown()
@@ -45,7 +45,7 @@ public class Execute : MonoBehaviour {
 	}
 
 	public void DisplayButton(){
-		_canvasGroup.alpha = 1;
+		//_canvasGroup.alpha = 1;
 	}
 
 	IEnumerator PressAndHold(){

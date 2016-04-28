@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRender: {fileID: 12000000}
   radius: 3.2
+  worldPos: {x: 0, y: 0, z: 0}
   targetingPanel: {fileID: 0}
   imageScale: {x: 1, y: 1, z: 1}
   screenScale: 6
@@ -489,7 +490,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     startWidth: 0.01
     endWidth: 0.01

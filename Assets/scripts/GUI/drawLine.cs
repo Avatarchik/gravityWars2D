@@ -15,7 +15,7 @@ public class drawLine : MonoBehaviour {
 
 	Vector3 mousePos;					
 	Vector3 firstPos;
-	Vector3 worldPos;
+	public Vector3 worldPos;
 	Vector3 radiusLimit;
 
 	public GameObject targetingPanel;
@@ -38,6 +38,8 @@ public class drawLine : MonoBehaviour {
 
 	int playerCounter = 0;
 
+	Vector3 incrementByOne;
+	float normalizeDistance;
 
 
 	//////////////////////////////////////////////////////////////////////////
@@ -90,9 +92,6 @@ public class drawLine : MonoBehaviour {
 		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
 		mousePos = Camera.main.WorldToScreenPoint(worldPos);
 
-		lineRender.SetPosition(0, firstPos);
-		lineRender.SetPosition(1, worldPos);
-
 		float angle = Vector3.Angle(upVector, lineDirection);
 		if (lineDirection.x < 0)
 		{
@@ -101,11 +100,30 @@ public class drawLine : MonoBehaviour {
 		
 		guiScript.targetingAngle = (int)angle;
 
+		redrawLine();
 
-		distance = Vector3.Distance(firstPos, worldPos);
-		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
-		guiScript.testNumber = (int)normalizeDistance;
 	}
+
+	public void redrawLine(){
+		distance = Vector3.Distance(firstPos, worldPos);
+		normalizeDistance = (distance/radius)*100;
+		guiScript.testNumber = (int)normalizeDistance;
+
+		lineRender.SetPosition(0, firstPos);
+		lineRender.SetPosition(1, worldPos);
+	}
+
+	public void DecreaseLine()
+	{
+		if (normalizeDistance >=1){
+			incrementByOne = Vector3.ClampMagnitude(lineDirection, .03f);
+			worldPos -= incrementByOne;
+
+			redrawLine();
+		}
+		
+	}
+	
 	
 	
 	public void FireTorpedo()
@@ -138,7 +156,6 @@ public class drawLine : MonoBehaviour {
 		targetingPanel.transform.localScale = reset;
 		confirmTarget.transform.localScale = reset;
 	}
-	
 	
 	
 	
