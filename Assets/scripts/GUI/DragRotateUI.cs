@@ -10,9 +10,23 @@ public class DragRotateUI : MonoBehaviour {
 
 	Quaternion rotation;
 
+	public GameObject sceneManager;
+
+	private drawLine _drawLine;
+	private playerState _playerState;
+	private GameObject activePlayer;
+
+	void Start () 
+	{
+		_playerState = sceneManager.GetComponent<playerState>();
+	}
+
 	public void BeginDrag()
 	{
 		firstPosition = Input.mousePosition;							//Log the start of the drag
+		
+		activePlayer = GameObject.FindWithTag(_playerState.activePlayer);
+		_drawLine = activePlayer.GetComponent<drawLine>();
 	}
 
 	public void Drag()
@@ -25,6 +39,9 @@ public class DragRotateUI : MonoBehaviour {
 		transform.rotation *= rotation;									//offset rotation transform with our new angle
 
 		firstPosition = Input.mousePosition;							//log the last position as the new start vector
-	}
 
+		_drawLine.ChangeAngle(rotation);
+
+
+	}
 }

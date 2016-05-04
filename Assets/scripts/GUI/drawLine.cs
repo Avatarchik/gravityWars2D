@@ -11,7 +11,10 @@ public class drawLine : MonoBehaviour {
 	public float radius = 2;					//limit to length of drawLine
 	float distance;								//length of the line
 	Vector3 lineDirection;						//vector of the line drawn.
+	Vector3 lineDirectionNew;					//vector the line is to go towards
 	Vector3 upVector = new Vector3(0,1,0);
+
+	Vector3 newDirection;
 
 	Vector3 mousePos;					
 	Vector3 firstPos;
@@ -83,14 +86,24 @@ public class drawLine : MonoBehaviour {
 
 		lineDirection = worldPos - firstPos;		//get the vector
 
-		// place the targeting widgets around the target reticle
+		//limit the line length
+		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
+		mousePos = Camera.main.WorldToScreenPoint(worldPos);
+
+		redrawLine();
+
+	}
+
+	public void redrawLine(){
+
 		confirmTarget.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.25f *radius)));
 
 		decreasePowerPanel.transform.position = Camera.main.WorldToScreenPoint(firstPos + -(lineDirection.normalized * (1.25f *radius)));
 
-		//limit the line length
-		worldPos = firstPos + Vector3.ClampMagnitude(lineDirection, radius);
-		mousePos = Camera.main.WorldToScreenPoint(worldPos);
+		distance = Vector3.Distance(firstPos, worldPos);
+		normalizeDistance = (distance/radius)*100;
+		guiScript.testNumber = (int)normalizeDistance;
+		lineDirection = worldPos - firstPos;
 
 		float angle = Vector3.Angle(upVector, lineDirection);
 		if (lineDirection.x < 0)
@@ -100,15 +113,6 @@ public class drawLine : MonoBehaviour {
 		
 		guiScript.targetingAngle = (int)angle;
 
-		redrawLine();
-
-	}
-
-	public void redrawLine(){
-		distance = Vector3.Distance(firstPos, worldPos);
-		normalizeDistance = (distance/radius)*100;
-		guiScript.testNumber = (int)normalizeDistance;
-
 		lineRender.SetPosition(0, firstPos);
 		lineRender.SetPosition(1, worldPos);
 	}
@@ -116,16 +120,31 @@ public class drawLine : MonoBehaviour {
 	public void DecreaseLine()
 	{
 		if (normalizeDistance >=1){
-			incrementByOne = Vector3.ClampMagnitude(lineDirection, .03f);
+			incrementByOne = Vector3.ClampMagnitude(lineDirection, .01f);
 			worldPos -= incrementByOne;
 
 			redrawLine();
-		}
-		
+		}	
 	}
-	
-	
-	
+
+	public void IncreaseLine()
+	{
+		if (normalizeDistance <= 100){
+			incrementByOne = Vector3.ClampMagnitude(lineDirection, .01f);
+			worldPos += incrementByOne;
+
+			redrawLine();
+		}
+	}
+
+	public void ChangeAngle(Quaternion lineDirectionNew)
+	{
+		newDirection = lineDirectionNew * lineDirection;
+		worldPos = firstPos + Vector3.ClampMagnitude(newDirection, radius);
+
+		redrawLine();
+	}
+
 	public void FireTorpedo()
 	{
 		float normalizeDistance = (distance/radius)*100;		//normalize the length of the line 
@@ -151,7 +170,8 @@ public class drawLine : MonoBehaviour {
 			targetingPanelCreateMemory.activateMemoryObject();
 			playerCounter ++;
 		}
-		targetingPanelCreateMemory.fadeAlpha(mousePos);
+		mousePos = Camera.main.WorldToScreenPoint(worldPos);
+		targetingPanelCreateMemory.fadeAlpha(mousePos);			//Send the position of the end of the line to the memory chit.
 		
 		targetingPanel.transform.localScale = reset;
 		confirmTarget.transform.localScale = reset;

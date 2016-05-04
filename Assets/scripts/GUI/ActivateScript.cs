@@ -16,9 +16,16 @@ public class ActivateScript : MonoBehaviour {
 		_playerState = sceneManager.GetComponent<playerState>();
 	}
 
-	public void ExecuteFunction(){
+	public void DecreaseMessage(){
 		activePlayer = GameObject.FindWithTag(_playerState.activePlayer);
 		_drawLine = activePlayer.GetComponent<drawLine>();
 		_drawLine.DecreaseLine();
 	}
+
+	public void IncreaseMessage(){
+		activePlayer = GameObject.FindWithTag(_playerState.activePlayer);
+		_drawLine = activePlayer.GetComponent<drawLine>();
+		_drawLine.IncreaseLine();
+	}
 }
+
