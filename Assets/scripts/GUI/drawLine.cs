@@ -25,6 +25,7 @@ public class drawLine : MonoBehaviour {
 	GameObject confirmTarget;
 
 	GameObject decreasePowerPanel;
+	GameObject firePanel;
 
 	CanvasGroup confirmTargetCanvasGroup;
 	CanvasGroup targetingPanelCanvasGroup;
@@ -61,7 +62,7 @@ public class drawLine : MonoBehaviour {
         confirmTargetCanvasGroup = confirmTarget.GetComponent<CanvasGroup>();
 
         decreasePowerPanel = GameObject.Find("decreasePower_panel");
-
+        firePanel = GameObject.Find("fire_panel");
 	}
 	
 	void OnMouseDrag()
@@ -75,6 +76,7 @@ public class drawLine : MonoBehaviour {
 			targetingPanel.transform.position = Camera.main.WorldToScreenPoint(transform.position);
 			confirmTarget.transform.position = mousePos;
 			decreasePowerPanel.transform.position = mousePos;
+			firePanel.transform.position = mousePos;
 
 			StartCoroutine("smoothAlpha");
 		}
@@ -97,6 +99,7 @@ public class drawLine : MonoBehaviour {
 	public void redrawLine(){
 
 		confirmTarget.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.25f *radius)));
+		firePanel.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.5f * radius)));
 
 		decreasePowerPanel.transform.position = Camera.main.WorldToScreenPoint(firstPos + -(lineDirection.normalized * (1.25f *radius)));
 
