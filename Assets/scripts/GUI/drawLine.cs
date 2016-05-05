@@ -99,7 +99,7 @@ public class drawLine : MonoBehaviour {
 	public void redrawLine(){
 
 		confirmTarget.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.25f *radius)));
-		firePanel.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.5f * radius)));
+		firePanel.transform.position = Camera.main.WorldToScreenPoint(firstPos +(lineDirection.normalized * (1.75f * radius)));
 
 		decreasePowerPanel.transform.position = Camera.main.WorldToScreenPoint(firstPos + -(lineDirection.normalized * (1.25f *radius)));
 
