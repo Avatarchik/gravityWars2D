@@ -9,6 +9,9 @@ public class changeText : MonoBehaviour {
 	private Score _score;
 	private ChangeMessage _changeMessage;
 
+	private GameType _gameType;
+	public bool scores =false;
+
 
  	public void messageState(string tag)
  	{
@@ -18,7 +21,10 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 2 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.EndScore();
+ 			if(scores == true){
+ 				_score.EndScore();
+ 			}
+ 			
 
  		}
  		else if (tag == "Player2")
@@ -27,8 +33,9 @@ public class changeText : MonoBehaviour {
 			canvasText.text = "Player 1 wins";
  			canvasGroup.alpha = 1;
  			canvasGroup.blocksRaycasts = true;
- 			_score.EndScore();
-
+ 			if(scores == true){
+ 				_score.EndScore();
+ 			}
 
  		}
  		else if (tag == "border")
@@ -45,6 +52,12 @@ public class changeText : MonoBehaviour {
  	}
  	void Start()
  	{
+		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+
+		if(_gameType.type == GameType.GameSelection.golf){
+			scores = true;
+		}
+
  		canvasText = GetComponent<Text>();
  		canvasGroup = gameObject.GetComponentInParent<CanvasGroup>();
  		_score = GameObject.FindWithTag("gameManager").GetComponent<Score>();

@@ -15,7 +15,6 @@ public class GameType : MonoBehaviour {
 			DontDestroyOnLoad(transform.gameObject);
 			Instance = this;
 		}
-
 	}
 
 }

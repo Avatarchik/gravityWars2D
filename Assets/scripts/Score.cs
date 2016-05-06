@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 
 public class Score : MonoBehaviour {
+	public GameType _gameType;
+
 	public int scoreNumber = 0;
 	public int scoreIncrease = 0;
 	public Text _scoreNumberText;
@@ -35,6 +37,12 @@ public class Score : MonoBehaviour {
 
 	void Start()
 		{
+			_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+
+			if(_gameType.type != GameType.GameSelection.golf){
+				this.enabled = false;
+			}
+
 			_scoreNumberText = GameObject.Find("scoreNumber_text").GetComponent<Text>();
 			_scoreNumberText.text = "0";
 

@@ -37,7 +37,7 @@ public class DragRotateUI : MonoBehaviour {
 		endVector = Input.mousePosition - transform.position;			//Find the end vector
 		
 		rotation = Quaternion.FromToRotation(startVector, endVector);	//rotate angle from first vector to end vector
-		rotation = Quaternion.Euler(new Vector3(0f, 0f, rotation.eulerAngles.z));
+		rotation = Quaternion.Euler(new Vector3(0f, 0f, rotation.eulerAngles.z));	//restrict angle to z axis
 
 		transform.rotation *= rotation;									//offset rotation transform with our new angle
 

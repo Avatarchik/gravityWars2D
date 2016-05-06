@@ -17,17 +17,26 @@ public class FloatingScores : MonoBehaviour {
 
 	public float speed = 1.0f;
 
+	bool scores = false;
+	GameType _gameType; 
 
-	
-	// Update is called once per frame
+
 	public void UpdateLocation (GameObject emitter, int value) {
-		_text.text = ("+" + value.ToString());
-		startPosition = Camera.main.WorldToScreenPoint(emitter.transform.position);
-		StartCoroutine(MoveToGoal());
+		if(scores == true){
+			_text.text = ("+" + value.ToString());
+			startPosition = Camera.main.WorldToScreenPoint(emitter.transform.position);
+			StartCoroutine(MoveToGoal());
+		}
 
 	}
 
 	void Start(){
+		_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
+
+		if(_gameType.type == GameType.GameSelection.golf){
+			scores = true;
+		}
+
 		disabledPosition = transform.position;
 		_text = GetComponent<Text>();
 		initialColor = GetComponent<Text>().color;
