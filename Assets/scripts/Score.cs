@@ -37,12 +37,6 @@ public class Score : MonoBehaviour {
 
 	void Start()
 		{
-			_gameType = GameObject.Find("persistentData").GetComponent<GameType>();
-
-			if(_gameType.type != GameType.GameSelection.golf){
-				this.enabled = false;
-			}
-
 			_scoreNumberText = GameObject.Find("scoreNumber_text").GetComponent<Text>();
 			_scoreNumberText.text = "0";
 
